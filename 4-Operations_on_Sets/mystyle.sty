@@ -1,0 +1,56 @@
+% Margin of an inch all sides
+%\documentclass[fleqn]{article}
+\usepackage{times}
+\usepackage[letterpaper]{geometry}
+\geometry{top=1.0in, bottom=1.0in, left=1.0in, right=1.0in}
+
+% Doublespacing
+%\usepackage{setspace}
+%\doublespacing
+
+% Rotating tables
+%\usepackage{rotating}
+
+% Header to modify header/page numbers
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{}
+\chead{}
+\rhead{\thepage}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+% To make sure we actually have header half-inch from the top edge
+% 12pt is one-sixth of an inch. subtract this from 0.5in to get headsep value
+\setlength\headsep{0.333in}
+
+% Math packages
+\usepackage{graphicx,latexsym}
+\usepackage{longtable}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{fullpage}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{bm}
+\usepackage{lmodern}
+\setlength{\parskip}{1em}
+
+% Table package to fix table length
+\usepackage{tabularx}
+
+% Venn Diagram
+\usepackage{venndiagram}
+
+% Ordered list with letters
+\usepackage{enumitem}
+
+% On command line, turn tex file to pdf
+% pdflatex Hello_World.tex
+
+% Define the new command
+\newcommand{\mybackslash}{\:\backslash\:}

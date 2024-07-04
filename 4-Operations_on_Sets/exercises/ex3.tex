@@ -1,0 +1,37 @@
+Verify that the Venn diagrams for $(A \cup B) \: \backslash \: (A \cap B)$ and $(A \: \backslash \: B) \cup (B \: \backslash \: A)$ both look like Figure 5, as stated in this section.
+
+\textbf{Solution:}
+\begin{alignat*}{2}
+    &x \in (A \cup B) \: \backslash \: (A \cap B)\\
+    &\equiv x \in (A \cup B) \wedge \neg (x \in A \cap B) && \quad \textbf{(1)}\\
+    &\equiv (x \in A \vee x \in B) \wedge \neg (x \in A \wedge x \in B) && \quad \textbf{(2)}\\
+    &\equiv (x \in A \vee x \in B) \wedge [\neg (x \in A) \vee \neg (x \in B)] && \quad \textbf{(3)}\\
+    &\equiv [(x \in A \vee x \in B) \wedge \neg (x \in A)] \vee [(x \in A \vee x \in B) \wedge \neg (x \in B)] && \quad \textbf{(4)}\\
+    &\equiv [(x \in A \wedge \neg (x \in A)) \vee (x \in B \wedge \neg (x \in A) ] \vee [(x \in A \vee x \in B) \wedge \neg (x \in B)] && \quad \textbf{(5)}\\
+    &\equiv [\text{Contradiction} \vee (x \in B \wedge \neg (x \in A) ] \vee [(x \in A \vee x \in B) \wedge \neg (x \in B)] && \quad \textbf{(6)}\\
+    &\equiv [x \in B \wedge \neg (x \in A)] \vee [(x \in A \vee x \in B) \wedge \neg (x \in B)] && \quad \textbf{(7)}\\
+    &\equiv [x \in B \wedge \neg (x \in A)] \vee [(x \in A \wedge \neg (x \in B)) \vee (x \in B \wedge \neg (x \in B))] && \quad \textbf{(8)}\\
+    &\equiv [x \in B \wedge \neg (x \in A)] \vee [(x \in A \wedge \neg (x \in B)) \vee \text{Contradiction}] && \quad \textbf{(9)}\\
+    &\equiv [x \in B \wedge \neg (x \in A)] \vee [x \in A \wedge \neg (x \in B)] && \quad \textbf{(10)}\\
+    &\equiv [x \in A \wedge \neg (x \in B)] \vee [x \in B \wedge \neg (x \in A) ] && \quad \textbf{(11)}\\
+    &\equiv [x \in A \: \backslash \: B] \vee [ x \in B \: \backslash \: A] && \quad \textbf{(12)}\\
+    &\equiv x \in (A \: \backslash \: B) \cup (B \: \backslash \: A) && \quad \textbf{(13)}
+\end{alignat*}
+
+We have shown that the two original statements are equivalent, hence their Venn diagrams must be identical. Drawing the Venn diagram will result in a diagram identical to Figure 5.
+\begin{align*}
+    &\textbf{(1)} \quad \text{Definition of Difference of Sets} \\
+    &\textbf{(2)} \quad \text{Definition of Intersection and Union of Sets}\\
+    &\textbf{(3)} \quad \text{DeMorgan's Law}\\
+    &\textbf{(4)} \quad \text{Distributive Law: Resulting in a central $\vee$}\\
+    &\textbf{(5)} \quad \text{Distributive Law: Only on the LHS of the central $\vee$}\\
+    &\textbf{(6)} \quad \text{Definition of Contradiction}\\
+    &\textbf{(7)} \quad \text{Contradiction Law}\\
+    &\textbf{(8)} \quad \text{Distributive Law: Only on the RHS of the central $\vee$}\\
+    &\textbf{(9)} \quad \text{Definition of Contradiction}\\
+    &\textbf{(10)} \:\: \text{Contradiction Law}\\
+    &\textbf{(11)}\:\: \text{Commutative Law} \\
+    &\textbf{(12)}\:\: \text{Definition of Difference of Sets}  \\
+    &\textbf{(13)}\:\: \text{Definition of Union of Sets}  \\
+\end{align*}
+\pagebreak

@@ -1,0 +1,19 @@
+% This is exercise.tex
+% Ex 4
+Which of the following expressions are well-formed?
+\begin{enumerate}[label=(\alph*)]
+    \item $\neg (\neg P \vee \neg \neg R)$
+    \item $\neg (P,Q,\wedge R)$
+    \item $P \wedge \neg P$
+    \item $(P \wedge Q)(P \vee R)$
+\end{enumerate}
+
+    \textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+    \item Yes, this expression is well-formed. It uses standard logical operators correctly: negation ($\neg$), disjunction ($\vee$), and double negation. It correctly negates the disjunction of $\neg P$ and $\neg \neg R$, which is a valid logical expression.
+    \item No, this expression is not well-formed. The syntax $\neg (P,Q,\wedge R)$ is incorrect because it attempts to use a comma and parentheses in a way that is not standard in logical expressions. Logical operators like conjunction ($\wedge$) should directly connect propositions without commas.
+    \item Yes, this expression is well-formed, although it is a contradiction. It uses the conjunction ($\wedge$) operator to connect $P$ and its negation $\neg P$ correctly. A contradiction is always false, but the expression itself is syntactically correct.
+    \item No, this expression is not well-formed because it lacks an operator between the two grouped expressions $(P \wedge Q)$ and $(P \vee R)$. For an expression to be well-formed, there should be a logical operator (like $\wedge$, $\vee$, $\rightarrow$, etc.) connecting any two sub-expressions.
+\end{enumerate}
+
+\pagebreak

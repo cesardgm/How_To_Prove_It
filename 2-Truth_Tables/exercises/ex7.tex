@@ -1,0 +1,110 @@
+Use truth tables to determine whether or not the arguments in exercise 7 of Section 1.1 are valid.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Jane and Pete won't both win the math prize. Pete will win either the math prize or the chemistry prize. Jane will win the math prize. Therefore, Pete will win the chemistry prize.
+    \item The main course will be either beef or fish. The vegetable will be either peas or corn. We will not have both fish as a main course and corn as a vegetable. Therefore, we will not have both beef as a main course and peas as a vegetable.
+    \item Either John or Bill is telling the truth. Either Sam or Bill is lying. Therefore, either John is telling the truth or Sam is lying.
+    \item Either sales will go up and the boss will be happy, or expenses will go up and the boss won't be happy. Therefore, sales and expenses will not both go up.
+\end{enumerate} 
+
+\textbf{Solution:} The argument is valid if, in every case where all premises are true, the conclusion is also true. This means there should be no row in the truth table where all the premises are true and the conclusion is false. If such a row exists, the argument is invalid because it shows a situation where the premises could all be true without the conclusion being true.
+
+\begin{enumerate}[label=(\alph*)]
+    \item Let $J_m$ stand for Jane can win the math prize, $P_c$ stand for Pete can with the chemistry prize, and $P_m$ stand for Pete can with the math prize. Consider the following truth table with the premises and conclusion of the argument.
+
+    \[
+    \begin{array}{|c|c|c||c|c|c||c|}
+    \hline
+    J_m & P_m & P_c & \neg (J_m \wedge P_m) & P_m \vee P_c & J_m & P_c \\
+    \hline
+    \text{False} & \text{False} & \text{False} & \text{True} & \text{False} & \text{False} & \text{False} \\
+    \text{False} & \text{False} & \text{True} & \text{True} & \text{True} & \text{False} & \text{True} \\
+    \text{False} & \text{True} & \text{False} & \text{True} & \text{True} & \text{False} & \text{False} \\
+    \text{False} & \text{True} & \text{True} & \text{True} & \text{True} & \text{False} & \text{True} \\
+    \text{True} & \text{False} & \text{False} & \text{True} & \text{False} & \text{True} & \text{False} \\
+    \text{True} & \text{False} & \text{True} & \color{blue}{\text{True}} & \color{blue}{\text{True}} & \color{blue}{\text{True}} & \color{blue}{\text{True}} \\
+    \text{True} & \text{True} & \text{False} & \text{False} & \text{True} & \text{True} & \text{False} \\
+    \text{True} & \text{True} & \text{True} & \text{False} & \text{True} & \text{True} & \text{True} \\
+    \hline
+    \end{array}
+    \]
+
+    Observe that row 6 is the only row where all the premises are true; furthermore, the conclusion is also true. Hence, the argument is valid.
+
+\pagebreak
+
+    \item Let $B$ stand for the statement "the main course will be beef", $F$ stand for "the main course will be fish", $P$ stand for "the vegetables will be peas", and $C$ stand for "the vegetables will be corn".
+
+\[
+\begin{array}{|c|c|c|c||c|c|c||c|}
+\hline
+B & F & P & C & B \vee F & P \vee C & \neg (F \wedge C) & \neg (B \wedge P) \\
+\hline
+T & T & T & T & T & T & F & F \\
+T & T & T & F & \color{blue}{T} & \color{blue}{T} & \color{blue}{T} & \color{blue}{F} \\
+T & T & F & T & T & T & F & T \\
+T & T & F & F & T & F & T & T \\
+T & F & T & T & T & T & T & F \\
+T & F & T & F & T & T & T & F \\
+T & F & F & T & T & T & T & T \\
+T & F & F & F & T & F & T & T \\
+F & T & T & T & T & T & F & T \\
+F & T & T & F & T & T & T & T \\
+F & T & F & T & T & T & F & T \\
+F & T & F & F & T & F & T & T \\
+F & F & T & T & F & T & T & T \\
+F & F & T & F & F & T & T & T \\
+F & F & F & T & F & T & T & T \\
+F & F & F & F & F & F & T & T \\
+\hline
+\end{array}
+\]
+
+Observe that row 2 is a row where all the premises are true; furthermore, the conclusion is also false. Hence, the argument is invalid. We could have stopped creating the table at row 2, but we didn't.
+
+\pagebreak
+
+\item Let $J$ stand for the statement "John is truth telling", $B$ for "Bill is truth telling", and $S$ for "Sam is truth telling". Consider the following truth table with the premises and conclusion of the argument.
+
+\[
+\begin{array}{|c|c|c||c|c||c|}
+\hline
+J & B & S & J \vee B & \neg S \vee \neg B & J \vee \neg S \\
+\hline
+T & T & T & T & F & T \\
+T & T & F & \color{blue}{T} & \color{blue}{T} & \color{blue}{T} \\
+T & F & T & \color{blue}{T} & \color{blue}{T} & \color{blue}{T} \\
+T & F & F & \color{blue}{T} & \color{blue}{T} & \color{blue}{T} \\
+F & T & T & T & F & F \\
+F & T & F & \color{blue}{T} & \color{blue}{T} & \color{blue}{T} \\
+F & F & T & F & T & F \\
+F & F & F & F & T & T \\
+\hline
+\end{array}
+\]
+
+Observe that row 2,3,4 and 6 are rows where all the premises are true; furthermore, the conclusion is also true in all said cases. Hence, the argument is valid.
+
+\item Let $S$ stand for statement "sales will go up", $E$ stand for "expenses will go up", and $H$ stand for "the boss will be happy". Consider the following truth table with the premises and conclusion of the argument.
+
+\[
+\begin{array}{|c|c|c||c||c|}
+\hline
+S & E & H & (S \wedge H) \vee (E \wedge \neg H) & \neg (S \wedge E) \\
+\hline
+T & T & T & \color{blue}{T} & \color{blue}{F} \\
+T & T & F & T & F \\
+T & F & T & T & T \\
+T & F & F & F & T \\
+F & T & T & F & T \\
+F & T & F & T & T \\
+F & F & T & F & T \\
+F & F & F & F & T \\
+\hline
+\end{array}
+\]
+
+Observe that the first row shows that the premise can hold true, but the conclusion remains false. Therefore, the argument is invalid.
+\end{enumerate}
+
+\pagebreak

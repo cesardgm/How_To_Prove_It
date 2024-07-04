@@ -1,0 +1,30 @@
+% This is exercise.tex
+% Ex 6
+Let $S$ stand for the statement  "Steve is happy" and $G$ for the statement "George is happy". What English sentences are represented by the following expressions? 
+
+\begin{enumerate}[label=(\alph*)]
+    \item $(S \vee G) \wedge (\neg S \vee \neg G).$
+    \item $[S \vee (G \wedge \neg S)] \vee \neg G.$
+    \item $S \vee [G \wedge (\neg S \vee \neg G)].$
+\end{enumerate}    
+
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+    \item  This expression means that at least one of Steve or George is happy, but they are not both happy. It combines the possibilities that either or both might be happy with the restriction that it cannot be the case that both are happy simultaneously. \textbf{Either Steve or George is happy, but not both.}
+
+    \item \begin{itemize}
+        \item $(G \wedge \neg S)$ translates to "George is happy and Steve is not happy".
+        \item $S \vee (G \wedge \neg S)$ translates to "Either Steve is happy, or George is happy but Steve is not happy".
+        \item $\neg G$ translates to "George is not happy".
+    \end{itemize} Combining these parts with the OR operator we get: "Either it is true that Steve is happy, or it is true that George is happy but Steve is not happy, or George is not happy". In a more natural English sentence, this logical expression could be interpreted as \textbf{Either Steve is happy, or George is happy while Steve is not, or George is not happy.} Which can be further simplified to the sentence in \textbf{(a).}
+  
+    \item \begin{itemize}
+        \item $(\neg S \vee \neg G)$ translates to "Either Steve is not happy, or George is not happy".
+        \item $G \wedge (\neg S \vee \neg G)$ translates to "George is happy, and either Steve is not happy or George is not happy". 
+        \item $S \vee [G \wedge (\neg S \vee \neg G)]$ translates to "Either Steve is happy, or George is happy and at the same time, it is also true that either Steve is not happy or George is not happy".
+    \end{itemize} However, the part "George is happy and George is not happy" is contradictory, which means that for the entire expression to be true, the only possible scenario is "George is happy and Steve is not happy." Given that the statement includes an OR operator with "Steve is happy," it simplifies to \textbf{Either Steve is happy, or George is happy, but not both.}
+
+    \item[NOTE] Remove the parentheses from all the statements: $S \vee G \wedge \neg S \vee \neg G.$
+\end{enumerate}
+
+\pagebreak

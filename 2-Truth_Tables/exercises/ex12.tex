@@ -1,0 +1,52 @@
+Use the laws stated in the text to find simpler formulas equivalent to these formulas.
+\begin{enumerate}[label=(\alph*)]
+    \item $\neg (\neg P \vee Q) \vee (P \wedge \neg R).$
+    \item $\neg (\neg P \wedge Q) \vee (P \wedge \neg R).$
+    \item $(P \wedge R) \vee [\neg R \wedge (P \vee Q)].$
+\end{enumerate}
+
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+    \item \textbf{$\bm{\neg (\neg P \vee Q) \vee (P \wedge \neg R) \equiv P \wedge (\neg Q \vee \neg R).}$}
+        \begin{alignat*}{2}
+            \neg (\neg P \vee Q) \vee (P \wedge \neg R) & \equiv (P \wedge \neg Q) \vee (P \wedge \neg R) && \quad \text{(DeMorgan's Law)} \\
+            & \equiv [(P \wedge \neg Q) \vee P] \wedge [(P \wedge \neg Q) \vee \neg R]&& \quad \text{(Distributive Law)} \\
+            & \equiv P \wedge [(P \wedge \neg Q) \vee \neg R]&& \quad \text{(Absorption Law)} \\
+            & \equiv P \wedge [(P \vee \neg R) \wedge (\neg Q \vee \neg R)]&& \quad \text{(Distributive Law)} \\
+            & \equiv P \wedge (P \vee \neg R) \wedge (\neg Q \vee \neg R)&& \quad \text{(Associative Law)} \\
+            & \equiv [P \wedge (P \vee \neg R)] \wedge (\neg Q \vee \neg R)&& \quad \text{(Associative Law)} \\
+            & \equiv P \wedge (\neg Q \vee \neg R)&& \quad \text{(Absorption Law)} \\
+        \end{alignat*}
+
+    \item \textbf{$\bm{\neg (\neg P \wedge Q) \vee (P \wedge \neg R) \equiv P \vee \neg Q.}$}
+        \begin{alignat*}{2}
+            \neg (\neg P \wedge Q) \vee (P \wedge \neg R) & \equiv (P \vee \neg Q) \vee (\neg P \wedge Q) && \quad \text{(DeMorgan's Law)}\\
+            & \equiv [(P \vee \neg Q) \vee P] \wedge [(P \vee \neg Q) \vee \neg R] && \quad \text{(Distributive Law)} \\
+            & \equiv [P \vee \neg Q \vee P] \wedge [(P \vee \neg Q) \vee \neg R] && \quad \text{(Associative Law)} \\
+            & \equiv [P \vee P \vee \neg Q] \wedge [(P \vee \neg Q) \vee \neg R] && \quad \text{(Commutative Law)} \\
+            & \equiv [(P \vee P) \vee \neg Q] \wedge [(P \vee \neg Q) \vee \neg R] && \quad \text{(Associative Law)} \\
+            & \equiv (P \vee \neg Q) \wedge [(P \vee \neg Q) \vee \neg R] && \quad \text{(Idempotent Law)} \\
+            & \equiv P \vee \neg Q && \quad \text{(Absorption Law)} \\
+        \end{alignat*}
+
+\pagebreak
+
+    \item \textbf{$\bm{(P \wedge R) \vee [\neg R \wedge (P \vee Q)] \equiv P \vee (\neg R \wedge Q).}$}
+        \begin{alignat*}{2}
+            (P \wedge R) \vee [\neg R \wedge (P \vee Q)] & \equiv [(P \wedge R) \vee \neg R] \wedge [(P \wedge R) \vee (P \vee Q)] && \quad \text{(Distributive Law)} \\
+            & \equiv [(P \vee \neg R) \wedge (R \vee \neg R)] \wedge [(P \wedge R) \vee (P \vee Q)] && \quad \text{(Distributive Law)} \\
+            & \equiv [(P \vee \neg R) \wedge \text{T.}] \wedge [(P \wedge R) \vee (P \vee Q)] && \quad \text{(T. Definition)} \\
+            & \equiv (P \vee \neg R) \wedge [(P \wedge R) \vee (P \vee Q)] && \quad \text{(Tautology Law)} \\
+            & \equiv [(P \vee \neg R) \wedge (P \wedge R)] \vee [(P \vee \neg R) \wedge (P \vee Q)] && \quad \text{(Distributive Law)} \\
+            & \equiv [(P \vee \neg R) \wedge (P \wedge R)] \vee [P \vee (\neg R \wedge Q)] && \quad \text{(Distributive Law)} \\
+            & \equiv [(P \vee \neg R) \wedge P \wedge R] \vee [P \vee (\neg R \wedge Q)] && \quad \text{(Associative Law)} \\
+            & \equiv [((P \vee \neg R) \wedge P) \wedge R] \vee [P \vee (\neg R \wedge Q)] && \quad \text{(Associative Law)} \\
+            & \equiv (P \wedge R) \vee [P \vee (\neg R \wedge Q)] && \quad \text{(Absorption Law)} \\
+            & \equiv (P \wedge R) \vee P \vee (\neg R \wedge Q) && \quad \text{(Associative Law)} \\
+            & \equiv [(P \wedge R) \vee P] \vee (\neg R \wedge Q) && \quad \text{(Associative Law)} \\
+            & \equiv P \vee (\neg R \wedge Q) && \quad \text{(Absorption Law)} \\
+        \end{alignat*}
+        , where T. stands for Tautology.
+\end{enumerate}
+
+\pagebreak

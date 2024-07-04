@@ -1,0 +1,27 @@
+% This is exercise.tex
+% Ex 3
+Analyze the logical forms of the following statements:
+\begin{enumerate}[label=(\alph*)]
+    \item Alice and Bob are not both in the room.
+    \item Alice and Bob are both not in the room.
+    \item Either Alice or Bob is not in the room.
+    \item Neither Alice nor Bob is in the room.
+\end{enumerate}
+
+\textbf{Solution:}
+Let $A$ represent the statement "Alice is in the room" and $B$ the statement "Bob is in the room". The given statements can be thus translated into propositional logic as follows:
+
+\begin{enumerate}[label=(\alph*)]
+    \item It is not the case that both Alice is in the room and Bob is in the room at the same time: $\neg (A \wedge B)$
+    \item Both Alice is not in the room, and Bob is not in the room. There are no other possibilities; both individuals are absent from the room: $\neg A \wedge \neg B$
+    \item Either Alice is not in the room, or Bob is not in the room, or both are not in the room: $\neg A \vee \neg B$ 
+    \item Alice is not in the room, and Bob is also not in the room. There is no scenario where either Alice or Bob is present in the room; both are absent: $\neg A \wedge \neg B$
+\end{enumerate}
+
+\begin{enumerate}
+    \item[NOTE] \textbf{"Neither Alice nor Bob is in the room"} uses a construction that directly states that both individuals are absent from the room. It's a single statement that negates the presence of both individuals simultaneously.
+    \item[] \textbf{"Alice and Bob are both not in the room"} effectively communicates the same information, indicating that both Alice and Bob are absent from the room. This construction explicitly states the absence of each individual.
+    \item[] Logically, both sentences assert the absence of both Alice and Bob from the room. In terms of logical operators, both sentences can be understood as expressing a conjunction (logical AND) of two negations.
+\end{enumerate}
+
+\pagebreak

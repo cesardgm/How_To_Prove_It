@@ -1,0 +1,41 @@
+% This is exercise.tex
+% Ex 2
+Make some conjectures about the values of $n$ for which $3^n-1$ is prime or the values of $n$ for which $3^n-2^n$ is prime. 
+
+\textbf{Solution:}
+
+\begin{table}[h]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+$n$ & Is $n$ prime? & $3^n$ & $2^n$ & $3^n-1$ & Is $3^n-1$ prime? & $3^n-2^n$ & Is $3^n-2^n$ prime?  \\
+\hline
+2   &  yes & 9  & 4  & 8   & no &  5  & yes \\
+3   &  yes & 27 & 8  & 26  & no &  19 & yes \\
+4   &  no & 81 & 16 & 80  & no &  65 & no \\
+5   &  yes & 243 & 32 & 242 & no & 211 & yes \\
+6   &  no & 729 & 64 & 728 & no & 665 & no \\
+7   &  yes & 2187 & 128 & 2186 & no & 2059 & no \\
+8   &  no & 6561 & 256 & 6560 & no & 6305 & no \\
+9   &  no & 19683 & 512 & 19682 & no & 19171 & no \\
+10  &  no & 59049 & 1024 & 59048 & no & 58025 & no \\
+11  &  yes & 177147 & 2048 & 177146 & no & 175099 & no \\
+12  &  no & 531441 & 4096 & 531440 & no & 527345 & no \\
+13  &  yes & 1594323 & 8192 & 1594322 & no & 1586131 & no \\
+14  &  no & 4782969 & 16384 & 4782968 & no & 4766585 & no \\
+15  &  no & 14348907 & 32768 & 14348906 & no & 14316139 & no \\
+\hline
+\end{tabular}%
+}
+\end{table}
+
+Consult a site that lists as many prime numbers as possible to speed up the table creation process. From the pattern in the table, we make the following conjectures:
+
+\textbf{Conjecture 1:} Suppose $n$ is an integer larger than 1. Then $3^n-1$ is not prime and is an even number.\\
+
+\doublespacing
+
+\textbf{Conjecture 2:} Suppose $3^n-2^n$ is prime, then $n$ is prime.
+
+\pagebreak

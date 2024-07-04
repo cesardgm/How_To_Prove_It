@@ -1,0 +1,36 @@
+Use truth tables to determine which of the following formulas are equivalent to each other:
+\begin{enumerate}[label=(\alph*)]
+    \item $(P \wedge Q) \vee (\neg P \wedge \neg Q).$
+    \item $\neg P \vee Q.$
+    \item $(P \vee \neg Q) \wedge (Q \vee \neg P).$
+    \item $\neg (P \vee Q).$
+    \item $(Q \wedge P) \vee \neg P.$
+\end{enumerate}
+
+\textbf{Solution:}
+Consider the following substitutions.
+\begin{itemize}
+    \item $A$: $(P \wedge Q) \vee (\neg P \wedge \neg Q)$.
+    \item $B$: $\neg P \vee Q$.
+    \item $C$: $(P \vee \neg Q) \wedge (Q \vee \neg P)$.
+    \item $D$: $\neg (P \vee Q)$.
+    \item $E$: $(Q \wedge P) \vee \neg P$.
+\end{itemize}
+
+The combined truth table for the statements above is.
+\[
+\begin{array}{|cc||c|c|c|c|c|}
+\hline
+P & Q & \color{red}{A} & B & C & \color{blue}{D} & \color{red}{E} \\
+\hline
+T & T & \color{red}{T} & T & T & \color{blue}{F} & \color{red}{T} \\
+T & F & \color{red}{F} & F & F & \color{blue}{F} & \color{red}{F} \\
+F & T & \color{red}{F} & T & F & \color{blue}{F} & \color{red}{T} \\
+F & F & \color{red}{T} & T & T & \color{blue}{T} & \color{red}{T} \\
+\hline
+\end{array}
+\]
+
+We observe that for the exact same combination of truth values for the inputs, formula $A \equiv E$, $B \equiv C$ and $D$ is not equivalent to any other formula.
+
+\pagebreak

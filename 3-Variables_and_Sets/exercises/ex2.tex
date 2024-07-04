@@ -1,0 +1,15 @@
+Analyze the logical forms of the following statements:
+\begin{enumerate}[label=(\alph*)]
+    \item $x$ and $y$ are men, and either $x$ is taller than $y$ or $y$ is taller than $x$.
+    \item Either $x$ or $y$ has brown eyes, and either $x$ or $y$ has red hair.
+    \item Either $x$ or $y$ has both brown eyes and red hair.
+\end{enumerate}
+
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+\item $M(x) \wedge M(y) \wedge [(T(x,y) \vee (T(y,x)]$, where $M(x)$ means "$x$ is man" and $T(x,y)$ means "$x$ is taller than $y$".
+\item $[B(x) \vee B(y)] \wedge [R(x) \vee R(y)]$, where $B(x)$ means "$x$ has brown eyes" and $R(x)$ means "$x$ has red eyes".
+\item $[B(x) \wedge R(x)] \vee [B(y) \vee R(y)]$, where $B(x)$ means "$x$ has brown eyes" and $R(x)$ means "$x$ has red eyes".
+\end{enumerate}
+
+\pagebreak

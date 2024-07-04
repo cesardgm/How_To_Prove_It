@@ -1,0 +1,26 @@
+Verify the identities in exercise 6 by writing out (using logical symbols) what it means for an object $x$ to be an element of each set and then using logical equivalences.
+
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+    \item We are to prove that $(A \cup B) \: \backslash \: C = (A \: \backslash \: C) \cup (B \: \backslash \: C)$.
+    \begin{alignat*}{2}
+        x \in (A \cup B) \: \backslash \: C &\equiv (x \in A \cup B) \wedge \neg (x \in C) && \quad \textbf{(Def. Difference of Sets)} \\
+        &\equiv (x \in A \vee x \in B) \wedge \neg (x \in C) && \quad \textbf{(Def. Union of Sets)}\\
+        &\equiv [x \in A \wedge \neg (x \in C)] \vee [x \in B \wedge \neg (x \in C)] && \quad \textbf{(Distributive Law)}\\
+        &\equiv (x \in A \: \backslash \: C) \vee (x \in B \: \backslash \: C) && \quad \textbf{(Def. Difference of Sets)}\\
+        &\equiv x \in (A \: \backslash \: C) \cup (B \: \backslash \: C) && \quad \textbf{(Def. Union of Sets)}\\
+    \end{alignat*}
+
+    \item We are to prove that $A \cup (B \: \backslash \: C) = (A \cup B) \: \backslash \: (C \: \backslash \: A)$.
+    \begin{alignat*}{2}
+        x \in A \cup (B \: \backslash \: C) &\equiv (x \in A) \vee (x \in B \: \backslash \: C) && \quad \textbf{(Def. of Union of Sets)}\\
+        &\equiv (x \in A) \vee [x \in B \wedge \neg (x \in C)] && \quad \textbf{(Def. of Difference of Sets)}\\
+        &\equiv [x \in A \vee x \in B] \wedge [x \in A \vee \neg (x \in C)] && \quad \textbf{(Distributive Law)}\\
+        &\equiv [x \in A \vee x \in B] \wedge \neg [\neg (x \in A) \wedge x \in C] && \quad \textbf{(DeMorgan's Law)}\\
+        &\equiv [x \in A \vee x \in B] \wedge \neg [x \in C \wedge \neg (x \in A)] && \quad \textbf{(Commutative Law)}\\
+        &\equiv [x \in A \vee x \in B] \wedge \neg (x \in C \: \backslash \: A) && \quad \textbf{(Def. of Difference of Sets)}\\
+        &\equiv (x \in A \cup B) \wedge \neg (x \in C \: \backslash \: A) && \quad \textbf{(Def. of Union of Sets)}\\
+        &\equiv x \in (A \cup B) \: \backslash \: (C \: \backslash \: A) && \quad \textbf{(Def. of Difference of Sets)}
+    \end{alignat*}
+\end{enumerate}
+\pagebreak

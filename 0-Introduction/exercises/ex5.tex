@@ -1,0 +1,38 @@
+% This is exercise.tex
+% Ex 5
+Use the table in Figure 1 and the discussion on p. 5 to find two more perfect numbers.
+
+\doublespacing
+
+\textbf{Solution:} Recall the Figure 1 table, some of it shown below for convenience. 
+
+\begin{table}[h]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+$n$ & Is $n$ prime? & $2^n-1$ & Is $2^n-1$ prime? \\
+\hline
+2   &  yes & 3  & yes \\
+3   &  yes & 7  & yes \\
+4   &  no & 15  & no \\
+5   &  yes & 31  & yes \\
+6   &  no & 63  & no \\
+7   &  yes & 127  & yes \\
+\hline
+\end{tabular}%
+}
+\end{table}
+
+And the relevant part of the discussion on p. 5 was that "Euclid proved that if $2^n-1$ is prime, then $(2^{n}-1) \cdot (2^{n-1})$ is a perfect". Also recall that a positive integer $n$ is said to be perfect if $n$ is equal to the sum of all positive integers smaller than $n$ that divide $n$. And we have established already that $6=1+23=2^1(2^2-1)$ and $28=1+2+4+7+14=2^2(2^3-1)$ are perfect numbers.
+
+\doublespacing
+
+From the table we see that the other Mersenne primes are 5 and 7. Hence,
+$$(2^5-1) \cdot (2^{5-1}) = (2^5-1)(2^4) = (32-1)(16) = (31)(16) = 496$$
+and
+$$(2^7-1) \cdot (2^{7-1}) = (2^7-1)(2^6) = (128-1)(64) = (127)(64) = 8128$$
+
+are two more perfect numbers. We verify that these are perfect numbers using the definition of perfect numbers. The divisors of 496 (and smaller than 496) are 1,2,4,8,16,31,62,124, and 248; and $1+2+4+8+16+31+62+124+248=496$. The divisors of 8128 (and smaller than 8128) are 1,2,4,8,16,32,64,127,254,508,1016,2032, and 4064. Their sum is 8128.
+
+\pagebreak

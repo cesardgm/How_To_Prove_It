@@ -1,0 +1,191 @@
+Use any method you wish to verify the following identities:
+
+\begin{enumerate}[label=(\alph*)]
+\item $(A \triangle B) \cup C = (A \cup C) \triangle (B \mybackslash C)$.
+\item $(A \triangle B) \cap C = (A \cap C) \triangle (B \cap C)$.
+\item $(A \triangle B) \mybackslash C = (A \mybackslash C) \triangle (B \mybackslash C)$.
+\end{enumerate}
+
+\textbf{Solution:} \\
+\textbf{13(a)} Below we prove that $(A \triangle B) \cup C = (A \cup C) \triangle (B \mybackslash C)$.
+\begin{alignat*}{2}
+&x \in (A \cup C) \triangle (B \mybackslash C) && \quad \textbf{(1)} \\
+&\equiv x \in [(A \cup C) \cup (B \mybackslash C)] \mybackslash [(A \cup C) \cap (B \mybackslash C)] && \quad \textbf{(2)}\\
+&\equiv [x \in (A \cup C) \cup (B \mybackslash C)] \wedge \neg [x \in (A \cup C) \cap (B \mybackslash C)] && \quad \textbf{(3)}\\
+&\equiv {[(x \in A \vee x \in C) \vee (x \in B \wedge \neg (x \in C))]} \wedge \neg [(x \in A \vee x \in C) \wedge (x \in B \wedge \neg (x \in C))] && \quad \textbf{(4)}\\
+&\equiv {[(x \in A \vee x \in C) \vee x \in B] \wedge [(x \in A \vee x \in C) \vee \neg (x \in C)]} \wedge \neg [(x \in A \vee x \in C) \wedge (x \in B \wedge \neg (x \in C))] && \quad \textbf{(5)}\\
+&\equiv {[(x \in A \vee x \in B) \vee x \in C] \wedge (x \in A \vee x \in C \vee \neg (x \in C))} \wedge \neg [(x \in A \vee x \in C) \wedge (x \in B \wedge \neg (x \in C))] && \quad \textbf{(6)}\\
+&\equiv [x \in Q \wedge (x \in A \vee x \in C \vee \neg (x \in C))] \wedge \neg [(x \in A \vee x \in C) \wedge (x \in B \wedge \neg (x \in C))] && \quad \textbf{(7)}\\
+&\equiv [x \in Q \wedge \text{Tautology}] \wedge \neg [(x \in A \vee x \in C) \wedge (x \in B \wedge \neg (x \in C))] && \quad \textbf{(8)}\\
+&\equiv [x \in Q \wedge \text{Tautology}] \wedge {\neg [x \in A \vee x \in C] \vee \neg [x \in B \wedge \neg (x \in C)]} && \quad \textbf{(9)}\\
+&\equiv [x \in Q \wedge \text{Tautology}] \wedge {[\neg (x \in A) \wedge \neg (x \in C)] \vee [\neg (x \in B) \vee x \in C]} && \quad \textbf{(10)}\\
+&\equiv [x \in Q \wedge \text{Tautology}] \wedge {[(\neg (x \in A) \wedge \neg (x \in C)) \vee \neg (x \in B)] \vee [(\neg (x \in A) \wedge \neg (x \in C)) \vee x \in C]} && \quad \textbf{(11)}\\
+&\equiv [x \in Q \wedge \text{Tautology}] \wedge {[(\neg (x \in A) \vee \neg (x \in B)) \wedge (\neg (x \in C) \vee \neg (x \in B))] \vee [(\neg (x \in A) \wedge \neg (x \in C)) \vee x \in C]} && \quad \textbf{(12)}\\
+&\equiv [x \in Q \wedge \text{Tautology}] \wedge {[x \in P \wedge (\neg (x \in C) \vee \neg (x \in B))] \vee [(\neg (x \in A) \wedge \neg (x \in C)) \vee x \in C]} && \quad \textbf{(13)}\\
+&\equiv [x \in Q \wedge \text{Tautology}] \wedge {[x \in P \wedge (\neg (x \in C) \vee \neg (x \in B))] \vee [(\neg (x \in A) \vee x \in C) \wedge (x \in C \vee \neg (x \in C))]} && \quad \textbf{(14)}\\
+&\equiv [x \in Q \wedge \text{Tautology}] \wedge {[x \in P \wedge (\neg (x \in C) \vee \neg (x \in B))] \vee [(\neg (x \in A) \vee x \in C) \wedge \text{Tautology}]} && \quad \textbf{(15)}\\
+&\equiv (x \in Q) \wedge {[x \in P \wedge (\neg (x \in C) \vee \neg (x \in B))] \vee [\neg (x \in A) \vee x \in C]} && \quad \textbf{(16)}\\
+&\equiv (x \in Q) \wedge {[x \in P \wedge \neg (x \in C)] \vee [P \wedge \neg (x \in B)] \vee [\neg (x \in A) \vee x \in C]} && \quad \textbf{(17)}\\
+&\equiv (x \in Q) \wedge [(x \in P \wedge \neg (x \in C)) \vee \neg (x \in A) \vee [P \wedge \neg (x \in B)] \vee x \in C] && \quad \textbf{(18)}\\
+&\equiv (x \in Q) \wedge [(x \in P \wedge \neg (x \in C)) \vee \neg (x \in A) \vee [(\neg (x \in A) \vee \neg (x \in B)) \wedge \neg (x \in B)] \vee x \in C] && \quad \textbf{(19)}\\
+&\equiv (x \in Q) \wedge [(x \in P \wedge \neg (x \in C)) \vee \neg (x \in A) \vee \neg (x \in B) \vee x \in C] && \quad \textbf{(20)}\\
+&\equiv (x \in Q) \wedge [(x \in P \wedge \neg (x \in C)) \vee x \in P \vee x \in C] && \quad \textbf{(21)}\\
+&\equiv (x \in Q) \wedge [((x \in P \wedge \neg (x \in C)) \vee x \in P) \vee x \in C] && \quad \textbf{(22)}\\
+&\equiv (x \in Q) \wedge [(x \in P \vee (x \in P \wedge \neg (x \in C))) \vee x \in C] && \quad \textbf{(23)}\\
+&\equiv (x \in Q) \wedge [x \in P \vee x \in C] && \quad \textbf{(24)}\\
+&\equiv (x \in Q) \wedge [(\neg (x \in A) \vee \neg (x \in B)) \vee x \in C] && \quad \textbf{(25)}\\
+&\equiv [(x \in A \vee x \in B) \vee x \in C] \wedge [(\neg (x \in A) \vee \neg (x \in B)) \vee x \in C] && \quad \textbf{(26)}\\
+&\equiv [(x \in A \vee x \in B) \wedge (\neg (x \in A) \vee \neg (x \in B))] \vee (x \in C) && \quad \textbf{(27)}\\
+&\equiv [(x \in A \vee x \in B) \wedge \neg (x \in A \wedge x \in B)] \vee (x \in C) && \quad \textbf{(28)}\\
+&\equiv [(x \in A \cup B) \wedge \neg (x \in A \cap B)] \vee (x \in C) && \quad \textbf{(29)}\\
+&\equiv [x \in (A \cup B) \mybackslash (A \cap B)] \vee (x \in C) && \quad \textbf{(30)}\\
+&\equiv (x \in A \triangle B) \vee (x \in C) && \quad \textbf{(31)}\\
+&\equiv x \in (A \triangle B) \cup C && \quad \textbf{(32)}\\
+&\qed
+\end{alignat*}
+
+Below is the corresponding chain of justification of the \textbf{13(a)} proof.
+\begin{alignat*}{2}
+&\textbf{(1)} && \quad \text{RHS}\\
+&\textbf{(2)} && \quad \text{Def. of Symmetric Difference}\\
+&\textbf{(3)} && \quad \text{Def. of Difference of Sets}\\
+&\textbf{(4)} && \quad \text{Def. of Union, Intersection and Difference of Sets}\\
+&\textbf{(5)} && \quad \text{Distributive Law}\\
+&\textbf{(6)} && \quad \text{Associative and Commutative Law}\\
+&\textbf{(7)} && \quad \text{Substitution where $x \in Q \equiv (x \in A \vee x \in B) \vee x \in C$}\\
+&\textbf{(8)} && \quad \text{Definition of Tautology}\\
+&\textbf{(9)} && \quad \text{DeMorgan's Law}\\
+&\textbf{(10)} && \quad \text{DeMorgan's Law}\\
+&\textbf{(11)} && \quad \text{Distributive Law}\\
+&\textbf{(12)} && \quad \text{Distributive Law}\\
+&\textbf{(13)} && \quad \text{Substitution where $x \in P \equiv \neg (x \in A) \vee \neg (x \in B)$}\\
+&\textbf{(14)} && \quad \text{Definition of Tautology}\\
+&\textbf{(15)} && \quad \text{Tautology Law}\\
+&\textbf{(16)} && \quad \text{Commutative Law and Associative Law}\\
+&\textbf{(17)} && \quad \text{Distributive Law}\\
+&\textbf{(18)} && \quad \text{Commutative Law}\\
+&\textbf{(19)} && \quad \text{Substitution where $x \in P \equiv \neg (x \in A) \vee \neg (x \in B)$}\\
+&\textbf{(20)} && \quad \text{Absorption Law $(\neg (x \in B) \equiv (\neg (x \in A) \vee \neg (x \in B)) \wedge \neg (x \in B))$}\\
+&\textbf{(21)} && \quad \text{Substitution where $x \in P \equiv \neg (x \in A) \vee \neg (x \in B)$}\\
+&\textbf{(22)} && \quad \text{Associative Law}\\
+&\textbf{(23)} && \quad \text{Commutative Law}\\
+&\textbf{(24)} && \quad \text{Absorption Law $(P \equiv P \vee (P \wedge \neg C))$}\\
+&\textbf{(25)} && \quad \text{Substitution where $x \in P \equiv \neg (x \in A) \vee \neg (x \in B)$}\\
+&\textbf{(26)} && \quad \text{Substitution where $x \in Q \equiv (x \in A \vee x \in B) \vee x \in C$}\\
+&\textbf{(27)} && \quad \text{Distributive Law}\\
+&\textbf{(28)} && \quad \text{DeMorgan's Law}\\
+&\textbf{(29)} && \quad \text{Def. of Union and Intersection of Sets}\\
+&\textbf{(30)} && \quad \text{Def. of Difference of Sets}\\
+&\textbf{(31)} && \quad \text{Def. of Symmetric Difference}\\
+&\textbf{(32)} && \quad \text{Def. of Union of Sets, LHS}\\        
+\end{alignat*}
+\pagebreak
+
+\textbf{13(b)} Below we prove that $(A \triangle B) \cap C = (A \cap C) \triangle (B \cap C)$.
+\begin{alignat*}{2}
+&x \in (A \cap C) \triangle (B \cap C) && \quad \textbf{(1)}\\
+&\equiv x \in [(A \cap C) \cup (B \cap C)] \setminus [(A \cap C) \cap (B \cap C)] && \quad \textbf{(2)}\\
+&\equiv [x \in (A \cap C) \cup (B \cap C)] \wedge \neg [x \in (A \cap C) \cap (B \cap C)] && \quad \textbf{(3)}\\
+&\equiv \{[x \in A \wedge x \in C] \vee [x \in B \wedge x \in C]\} \wedge \neg \{[x \in A \wedge x \in C] \wedge [x \in B \wedge x \in C]\} && \quad \textbf{(4)}\\
+&\equiv \{(x \in A \vee x \in B) \wedge x \in C\} \wedge \neg \{[x \in A \wedge x \in C] \wedge [x \in B \wedge x \in C]\} && \quad \textbf{(5)}\\
+&\equiv [(x \in A \vee x \in B) \wedge x \in C] \wedge \neg [x \in A \wedge x \in C \wedge x \in B \wedge x \in C] && \quad \textbf{(6)}\\
+&\equiv [(x \in A \vee x \in B) \wedge x \in C] \wedge \neg [x \in A \wedge x \in B \wedge (x \in C \wedge x \in C)] && \quad \textbf{(7)}\\
+&\equiv [(x \in A \vee x \in B) \wedge x \in C] \wedge \neg [x \in A \wedge x \in B \wedge x \in C] && \quad \textbf{(8)}\\
+&\equiv [(x \in A \vee x \in B) \wedge x \in C] \wedge [\neg (x \in A \wedge x \in B) \vee \neg (x \in C)] && \quad \textbf{(9)}\\
+&\equiv \{[(x \in A \vee x \in B) \wedge x \in C] \wedge \neg (x \in A \wedge x \in B)\} \vee \{[(x \in A \vee x \in B) \wedge x \in C] \wedge \neg (x \in C)\} && \quad \textbf{(10)}\\
+&\equiv \{[(x \in A \vee x \in B) \wedge x \in C] \wedge \neg (x \in A \wedge x \in B)\} \vee \{(x \in A \vee x \in B) \wedge [x \in C \wedge \neg (x \in C)]\} && \quad \textbf{(11)}\\
+&\equiv \{[(x \in A \vee x \in B) \wedge x \in C] \wedge \neg (x \in A \wedge x \in B)\} \vee \{(x \in A \vee x \in B) \wedge \text{Contradiction}\} && \quad \textbf{(12)}\\
+&\equiv \{[(x \in A \vee x \in B) \wedge x \in C] \wedge \neg (x \in A \wedge x \in B)\} \vee (\text{Contradiction}) && \quad \textbf{(13)}\\
+&\equiv \{[(x \in A \vee x \in B) \wedge x \in C] \wedge \neg (x \in A \wedge x \in B)\} && \quad \textbf{(14)}\\
+&\equiv (x \in A \vee x \in B) \wedge (x \in C) \wedge \neg (x \in A \wedge x \in B) && \quad \textbf{(15)}\\
+&\equiv (x \in A \vee x \in B) \wedge \neg (x \in A \wedge x \in B) \wedge (x \in C)  && \quad \textbf{(16)}\\
+&\equiv (x \in A \cup B) \wedge \neg (x \in A \cap B) \wedge (x \in C)  && \quad \textbf{(17)}\\
+&\equiv [(x \in A \cup B) \wedge \neg (x \in A \cap B)] \wedge (x \in C)  && \quad \textbf{(18)}\\
+&\equiv (x \in A \triangle B) \wedge (x \in C)  && \quad \textbf{(19)}\\
+&\equiv x \in (A \triangle B) \cap C  && \quad \textbf{(20)}\\
+&\qed \\
+\end{alignat*}
+
+\pagebreak
+
+Below is the corresponding chain of justification of the \textbf{13(b)} proof.
+\begin{alignat*}{2}
+&\textbf{(1)} && \quad \text{RHS}\\
+&\textbf{(2)} && \quad \text{Def. of Symmetric Difference}\\
+&\textbf{(3)} && \quad \text{Def. of Difference of Sets}\\
+&\textbf{(4)} && \quad \text{Def. of Union and Intersection of Sets}\\
+&\textbf{(5)} && \quad \text{Distributive Law}\\
+&\textbf{(6)} && \quad \text{Associative Law}\\
+&\textbf{(7)} && \quad \text{Associative Law and Commutative Law}\\
+&\textbf{(8)} && \quad \text{Idempotent Law}\\
+&\textbf{(9)} && \quad \text{DeMorgan's Law}\\
+&\textbf{(10)} && \quad \text{Distributive Law}\\
+&\textbf{(11)} && \quad \text{Associative Law}\\
+&\textbf{(12)} && \quad \text{Def. of Contradiction}\\
+&\textbf{(13)} && \quad \text{Contradiction Law}\\
+&\textbf{(14)} && \quad \text{Contradiction Law}\\
+&\textbf{(15)} && \quad \text{Associative Law}\\
+&\textbf{(16)} && \quad \text{Commutative Law}\\
+&\textbf{(17)} && \quad \text{Def. of Union and Intersection of Sets}\\
+&\textbf{(18)} && \quad \text{Associative Law}\\
+&\textbf{(19)} && \quad \text{Def. of Symmetric Difference}\\
+&\textbf{(20)} && \quad \text{Def. of Intersection of Sets, LHS}\\
+\end{alignat*}
+\pagebreak
+
+\textbf{13(c)} Below we prove that $(A \triangle B) \mybackslash C = (A \mybackslash C) \triangle (B \mybackslash C)$.
+\begin{alignat*}{2}
+& x \in (A \mybackslash C) \triangle (B \mybackslash C) && \quad \textbf{(1)}\\
+&\equiv x \in [(A \setminus C) \cup (B \setminus C)] \setminus [(A \setminus C) \cap (B \setminus C)] && \quad \textbf{(2)}\\
+&\equiv [x \in (A \setminus C) \cup (B \setminus C)] \wedge \neg [x \in (A \setminus C) \cap (B \setminus C)] && \quad \textbf{(3)}\\
+&\equiv [(x \in A \setminus C) \vee  (x \in B \setminus C)] \wedge \neg [(x \in A \setminus C) \wedge (x \in B \setminus C)] && \quad \textbf{(4)}\\
+&\equiv \{[x \in A \wedge \neg (x \in C)] \vee  [x \in B \wedge \neg (x \in C)]\} \wedge \neg \{(x \in A \setminus C) \wedge (x \in B \setminus C)\} && \quad \textbf{(5)}\\
+&\equiv [(x \in A \vee x \in B) \wedge \neg (x \in C)] \wedge \neg \{(x \in A \setminus C) \wedge (x \in B \setminus C)\} && \quad \textbf{(6)}\\
+&\equiv [(x \in A \vee x \in B) \wedge \neg (x \in C)] \wedge \neg \{[x \in A \wedge \neg (x \in C)] \wedge [x \in B \wedge \neg (x \in C)]\} && \quad \textbf{(7)}\\
+&\equiv [(x \in A \vee x \in B) \wedge \neg (x \in C)] \wedge \neg [x \in A \wedge \neg (x \in C) \wedge x \in B \wedge \neg (x \in C)] && \quad \textbf{(8)}\\
+&\equiv [(x \in A \vee x \in B) \wedge \neg (x \in C)] \wedge \neg [x \in A \wedge x \in B \wedge [\neg (x \in C) \wedge \neg (x \in C)]] && \quad \textbf{(9)}\\
+&\equiv [(x \in A \vee x \in B) \wedge \neg (x \in C)] \wedge \neg [x \in A \wedge x \in B \wedge \neg (x \in C)] && \quad \textbf{(10)}\\
+&\equiv [(x \in A \vee x \in B) \wedge \neg (x \in C)] \wedge [\neg (x \in A \wedge x \in B) \vee x \in C] && \quad \textbf{(11)}\\
+&\equiv \{[(x \in A \vee x \in B) \wedge \neg (x \in C)] \wedge \neg (x \in A \wedge x \in B)\} \vee \{[(x \in A \vee x \in B) \wedge \neg (x \in C)] \wedge x \in C\} && \quad \textbf{(12)}\\
+&\equiv \{[(x \in A \vee x \in B) \wedge \neg (x \in C)] \wedge \neg (x \in A \wedge x \in B)\} \vee \{(x \in A \vee x \in B) \wedge [\neg (x \in C) \wedge x \in C]\} && \quad \textbf{(13)}\\
+&\equiv \{[(x \in A \vee x \in B) \wedge \neg (x \in C)] \wedge \neg (x \in A \wedge x \in B)\} \vee [(x \in A \vee x \in B) \wedge \text{Contradiction}] && \quad \textbf{(14)}\\
+&\equiv \{[(x \in A \vee x \in B) \wedge \neg (x \in C)] \wedge \neg (x \in A \wedge x \in B)\} \vee \text{Contradiction} && \quad \textbf{(15)}\\
+&\equiv [(x \in A \vee x \in B) \wedge \neg (x \in C)] \wedge \neg (x \in A \wedge x \in B) && \quad \textbf{(16)}\\
+&\equiv (x \in A \vee x \in B) \wedge \neg (x \in C) \wedge \neg (x \in A \wedge x \in B) && \quad \textbf{(17)}\\
+&\equiv (x \in A \vee x \in B) \wedge \neg (x \in A \wedge x \in B) \wedge \neg (x \in C) && \quad \textbf{(18)}\\
+&\equiv [(x \in A \vee x \in B) \wedge \neg (x \in A \wedge x \in B)] \wedge \neg (x \in C) && \quad \textbf{(19)}\\
+&\equiv [(x \in A \cup B) \wedge \neg (x \in A \cap B)] \wedge \neg (x \in C) && \quad \textbf{(20)}\\
+&\equiv [x \in (A \cup B) \setminus (A \cap B)] \wedge \neg (x \in C) && \quad \textbf{(21)}\\
+&\equiv x \in (A \triangle B) \wedge \neg (x \in C) && \quad \textbf{(22)}\\
+&\equiv x \in (A \triangle B) \setminus C && \quad \textbf{(23)}\\
+&\qed
+\end{alignat*}
+\pagebreak
+
+Below is the corresponding chain of justification of the \textbf{13(c)} proof.
+\begin{alignat*}{2}
+&\textbf{(1)} && \quad \text{RHS}\\
+&\textbf{(2)} && \quad \text{Def. of Symmetric Difference}\\
+&\textbf{(3)} && \quad \text{Def. of Difference  of Sets}\\
+&\textbf{(4)} && \quad \text{Def. of Union and Intersection of Sets}\\
+&\textbf{(5)} && \quad \text{Def. of Difference  of Sets}\\
+&\textbf{(6)} && \quad \text{Distributive Law}\\
+&\textbf{(7)} && \quad \text{Def. of Difference  of Sets}\\
+&\textbf{(8)} && \quad \text{Associative Law}\\
+&\textbf{(9)} && \quad \text{Associative and Commutative Law}\\
+&\textbf{(10)} && \quad \text{Idempotent Law}\\
+&\textbf{(11)} && \quad \text{DeMorgan's Law}\\
+&\textbf{(12)} && \quad \text{Distributive Law}\\
+&\textbf{(15)} && \quad \text{Contradiction Law}\\
+&\textbf{(14)} && \quad \text{Def. of Contradiction}\\
+&\textbf{(15)} && \quad \text{Contradiction Law}\\
+&\textbf{(16)} && \quad \text{Contradiction Law}\\
+&\textbf{(17)} && \quad \text{Associative Law}\\
+&\textbf{(18)} && \quad \text{Commutative Law}\\
+&\textbf{(19)} && \quad \text{Associative Law}\\
+&\textbf{(20)} && \quad \text{Def. of Union and Intersection of Sets}\\
+&\textbf{(21)} && \quad \text{Def. of Difference of Sets}\\
+&\textbf{(22)} && \quad \text{Def. of Symmetric Difference}\\
+&\textbf{(23)} && \quad \text{Def. of Difference of Sets, LHS}\\
+\end{alignat*}
+\pagebreak

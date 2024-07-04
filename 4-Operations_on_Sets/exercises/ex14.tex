@@ -1,0 +1,184 @@
+Use any method you wish to verify the following identities:
+
+\begin{enumerate}[label=(\alph*)]
+\item $(A \cup B) \triangle C = (A \triangle C) \triangle (B \setminus A)$.
+\item $(A \cap B) \triangle C = (A \triangle C) \triangle (A \setminus B)$.
+\item $(A \setminus B) \triangle C = (A \triangle C) \triangle (A \cap B)$.
+\end{enumerate}
+
+\textbf{14(a)} Below we prove that $(A \cup B) \triangle C = (A \triangle C) \triangle (B \setminus A)$.\\
+But first, we prove the following lemma, which we will call \textbf{Lemma 14(a)}: $A \triangle (B \setminus A) \equiv A \cup B$.
+\begin{alignat*}{2}
+&x \in A \triangle (B \setminus A)  && \quad \textbf{(1)} \\
+&\equiv x \in [A \cup (B \setminus A)] \setminus [A \cap (B \setminus A)] && \quad \textbf{(2)}\\
+&\equiv [x \in A \cup (B \setminus A)] \wedge \neg [x \in A \cap (B \setminus A)] && \quad \textbf{(3)}\\
+&\equiv [x \in A \vee x \in (B \setminus A)] \wedge \neg [x \in A \wedge x \in (B \setminus A)] && \quad \textbf{(4)}\\
+&\equiv \{x \in A \vee [x \in B \wedge \neg (x \in A)]\} \wedge \neg \{x \in A \wedge [x \in B \wedge \neg (x \in A)]\} && \quad \textbf{(5)}\\
+&\equiv \{(x \in A \vee x \in B) \wedge (x \in A \vee \neg (x \in A))]\} \wedge \neg \{x \in A \wedge [x \in B \wedge \neg (x \in A)]\} && \quad \textbf{(6)}\\
+&\equiv \{(x \in A \vee x \in B) \wedge \text{Tautology}]\} \wedge \neg \{x \in A \wedge [x \in B \wedge \neg (x \in A)]\} && \quad \textbf{(7)}\\
+&\equiv (x \in A \vee x \in B) \wedge \neg \{x \in A \wedge [x \in B \wedge \neg (x \in A)]\} && \quad \textbf{(8)}\\
+&\equiv (x \in A \vee x \in B) \wedge \neg [x \in A \wedge x \in B \wedge \neg (x \in A)] && \quad \textbf{(9)}\\
+&\equiv (x \in A \vee x \in B) \wedge \neg [x \in A \wedge \neg (x \in A) \wedge x \in B] && \quad \textbf{(10)}\\
+&\equiv (x \in A \vee x \in B) \wedge \neg \{[x \in A \wedge \neg (x \in A)] \wedge x \in B\} && \quad \textbf{(11)}\\
+&\equiv (x \in A \vee x \in B) \wedge \neg [\text{Contradiction} \wedge x \in B] && \quad \textbf{(12)}\\
+&\equiv (x \in A \vee x \in B) \wedge \neg \text{Contradiction} && \quad \textbf{(13)}\\
+&\equiv (x \in A \vee x \in B) \wedge \text{Tautology} && \quad \textbf{(14)}\\
+&\equiv (x \in A \vee x \in B) && \quad \textbf{(15)}\\
+&\equiv x \in (A \cup B) && \quad \textbf{(16)}\\
+&\qed
+\end{alignat*}
+
+Proof for \textbf{14(a)}:
+\begin{alignat*}{2}
+&x \in (A \triangle C) \triangle (B \setminus A) && \quad \textbf{(1)}\\
+&\equiv x \in A \triangle [C \triangle (B \setminus A)] && \quad \textbf{(2)}\\
+&\equiv x \in A \triangle [(B \setminus A) \triangle C] && \quad \textbf{(3)}\\
+&\equiv x \in [A \triangle (B \setminus A]) \triangle C && \quad \textbf{(4)}\\
+&\equiv x \in (A \cup B) \triangle C && \quad \textbf{(5)}\\
+&\qed
+\end{alignat*}
+\pagebreak
+
+Below is the corresponding chain of justification for \textbf{Lemma 14(a)}.
+\begin{alignat*}{2}
+&\textbf{(1)} && \quad \text{LHS}\\
+&\textbf{(2)} && \quad \text{Def. of Symmetric Difference}\\
+&\textbf{(3)} && \quad \text{Def. of Difference  of Sets}\\
+&\textbf{(4)} && \quad \text{Def. of Union and Intersection of Sets}\\
+&\textbf{(5)} && \quad \text{Def. of Difference  of Sets}\\
+&\textbf{(6)} && \quad \text{Distributive Law}\\
+&\textbf{(7)} && \quad \text{Definition of Tautology}\\
+&\textbf{(8)} && \quad \text{Law of Tautology}\\
+&\textbf{(9)} && \quad \text{Associative Law}\\
+&\textbf{(10)} && \quad \text{Commutative Law}\\
+&\textbf{(11)} && \quad \text{Associative Law}\\
+&\textbf{(12)} && \quad \text{Definition of Contradiction}\\
+&\textbf{(13)} && \quad \text{Law of Contradiction}\\
+&\textbf{(14)} && \quad \text{Negation Law}\\
+&\textbf{(15)} && \quad \text{Law of Tautology}\\
+&\textbf{(16)} && \quad \text{Def. of Union of Sets, RHS}\\
+\end{alignat*}
+
+Below is the corresponding chain of justification for \textbf{Exercise 14(a)}.
+\begin{alignat*}{2}
+&\textbf{(1)} && \quad \text{RHS}\\
+&\textbf{(2)} && \quad \text{\textbf{Exercise 12} Associative Law}\\
+&\textbf{(3)} && \quad C \triangle (B \setminus A) \equiv [C \setminus (B \setminus A)] \cup [(B \setminus A) \setminus C] \equiv [(B \setminus A) \setminus C] \cup [C \setminus (B \setminus A)] \equiv (B \setminus A) \triangle C\\
+&\textbf{(4)} && \quad \text{\textbf{Exercise 12} Associative Law}\\
+&\textbf{(5)} && \quad \text{By Lemma 14(a), LHS}\\
+\end{alignat*}
+\pagebreak
+
+\textbf{14(b)} Below we prove that $(A \cap B) \triangle C = (A \triangle C) \triangle (A \setminus B)$.\\
+But first, we prove the following lemma, which we will call \textbf{Lemma 14(b)}: $A \triangle (A \setminus B) \equiv A \cap B$.
+\begin{alignat*}{2}
+&x \in A \triangle (A \setminus B)  && \quad \textbf{(1)} \\
+&\equiv x \in [A \cup (A \setminus B)] \setminus [A \cap (A \setminus B)] && \quad \textbf{(2)}\\
+&\equiv [x \in A \cup (A \setminus B)] \wedge \neg [x \in A \cap (A \setminus B)] && \quad \textbf{(3)}\\
+&\equiv [x \in A \vee x \in (A \setminus B)] \wedge \neg [x \in A \wedge x \in (A \setminus B)] && \quad \textbf{(4)}\\
+&\equiv \{x \in A \vee [x \in A \wedge \neg (x \in B)]\} \wedge \neg \{x \in A \wedge [x \in A \wedge \neg (x \in B)]\} && \quad \textbf{(5)}\\
+&\equiv x \in A \wedge \neg \{x \in A \wedge [x \in A \wedge \neg (x \in B)]\} && \quad \textbf{(6)}\\
+&\equiv x \in A \wedge \neg \{[x \in A \wedge x \in A] \wedge \neg (x \in B)\} && \quad \textbf{(7)}\\
+&\equiv x \in A \wedge \neg [x \in A\wedge \neg (x \in B)] && \quad \textbf{(8)}\\
+&\equiv x \in A \wedge [\neg (x \in A) \vee x \in B] && \quad \textbf{(9)}\\
+&\equiv [x \in A \wedge \neg (x \in A)] \vee [x \in A \wedge x \in B] && \quad \textbf{(10)}\\
+&\equiv \text{Contradiction} \vee [x \in A \wedge x \in B] && \quad \textbf{(11)}\\
+&\equiv x \in A \wedge x \in B && \quad \textbf{(12)}\\
+&\equiv x \in A \cap B && \quad \textbf{(13)}\\
+&\qed
+\end{alignat*}
+
+Proof for \textbf{14(b)}:
+\begin{alignat*}{2}
+&x \in (A \triangle C) \triangle (A \setminus B) && \quad \textbf{(1)}\\
+&\equiv x \in A \triangle [C \triangle (A \setminus B)] && \quad \textbf{(2)}\\
+&\equiv x \in A \triangle [(A \setminus B) \triangle C] && \quad \textbf{(3)}\\
+&\equiv x \in [A \triangle (A \setminus B]) \triangle C && \quad \textbf{(4)}\\
+&\equiv x \in (A \cap B) \triangle C && \quad \textbf{(5)}\\
+&\qed
+\end{alignat*}
+\pagebreak
+
+Below is the corresponding chain of justification for \textbf{Lemma 14(b)}.
+\begin{alignat*}{2}
+&\textbf{(1)} && \quad \text{LHS}\\
+&\textbf{(2)} && \quad \text{Def. of Symmetric Difference}\\
+&\textbf{(3)} && \quad \text{Def. of Difference  of Sets}\\
+&\textbf{(4)} && \quad \text{Def. of Union and Intersection of Sets}\\
+&\textbf{(5)} && \quad \text{Def. of Difference  of Sets}\\
+&\textbf{(6)} && \quad \text{Absorption Law}\\
+&\textbf{(7)} && \quad \text{Associative Law}\\
+&\textbf{(8)} && \quad \text{Idempotent Law}\\
+&\textbf{(9)} && \quad \text{DeMorgan's Law}\\
+&\textbf{(10)} && \quad \text{Distributive Law}\\
+&\textbf{(11)} && \quad \text{Definition of Contradiction}\\
+&\textbf{(12)} && \quad \text{Law of Contradiction}\\
+&\textbf{(13)} && \quad \text{Def. of Intersection of Sets, RHS}\\
+\end{alignat*}
+
+Below is the corresponding chain of justification for \textbf{Exercise 14(b)}.
+\begin{alignat*}{2}
+&\textbf{(1)} && \quad \text{RHS}\\
+&\textbf{(2)} && \quad \text{\textbf{Exercise 12} Associative Law}\\
+&\textbf{(3)} && \quad C \triangle (A \setminus B) \equiv [C \setminus (A \setminus B)] \cup [(A \setminus B) \setminus C] \equiv [(A \setminus B) \setminus C] \cup [C \setminus (A \setminus B)] \equiv (A \setminus B) \triangle C\\
+&\textbf{(4)} && \quad \text{\textbf{Exercise 12} Associative Law}\\
+&\textbf{(5)} && \quad \text{By Lemma 14(b), LHS}\\
+\end{alignat*}
+\pagebreak
+
+\textbf{14(c)} Below we prove that $(A \setminus B) \triangle C = (A \triangle C) \triangle (A \cap B)$.
+But first, we prove the following lemma, which we will call \textbf{Lemma 14(c)}: $A \triangle (A \cap B) \equiv A \setminus B$.
+\begin{alignat*}{2}
+&x \in A \triangle (A \cap B)  && \quad \textbf{(1)} \\
+&\equiv x \in [A \cup (A \cap B)] \setminus [A \cap (A \cap B)] && \quad \textbf{(2)} \\
+&\equiv x \in [A \cup (A \cap B)] \wedge \neg [x \in A \cap (A \cap B)] && \quad \textbf{(3)} \\
+&\equiv [x \in A \vee x \in A \cap B] \wedge \neg [x \in A \wedge x \in A \cap B] && \quad \textbf{(4)} \\
+&\equiv [x \in A \vee (x \in A \wedge x \in B)] \wedge \neg [x \in A \wedge (x \in A \wedge x \in B)] && \quad \textbf{(5)} \\
+&\equiv (x \in A) \wedge \neg [x \in A \wedge (x \in A \wedge x \in B)] && \quad \textbf{(6)} \\
+&\equiv (x \in A) \wedge \neg [(x \in A \wedge x \in A) \wedge x \in B] && \quad \textbf{(7)} \\
+&\equiv (x \in A) \wedge \neg [x \in A \wedge x \in B] && \quad \textbf{(8)} \\
+&\equiv (x \in A) \wedge [\neg (x \in A) \vee \neg (x \in B)] && \quad \textbf{(9)} \\
+&\equiv [x \in A \wedge \neg (x \in A)] \vee [x \in A \wedge \neg (x \in B)] && \quad \textbf{(10)} \\
+&\equiv \text{Contradiction} \vee [x \in A \wedge \neg (x \in B)] && \quad \textbf{(11)} \\
+&\equiv x \in A \wedge \neg (x \in B) && \quad \textbf{(12)} \\
+&\equiv x \in A \setminus B && \quad \textbf{(13)} \\
+&\qed
+\end{alignat*}
+
+Proof for \textbf{14(c)}:
+\begin{alignat*}{2}
+&x \in (A \triangle C) \triangle (A \cap B) && \quad \textbf{(1)}\\
+&\equiv x \in A \triangle [C \triangle (A \cap B)] && \quad \textbf{(2)}\\
+&\equiv x \in A \triangle [(A \cap B) \triangle C] && \quad \textbf{(3)}\\
+&\equiv x \in [A \triangle (A \cap B]) \triangle C && \quad \textbf{(4)}\\
+&\equiv x \in (A \setminus B) \triangle C && \quad \textbf{(5)}\\
+&\qed
+\end{alignat*}
+\pagebreak
+
+Below is the corresponding chain of justification for \textbf{Lemma 14(c)}.
+\begin{alignat*}{2}
+&\textbf{(1)} && \quad \text{LHS}\\
+&\textbf{(2)} && \quad \text{Def. of Symmetric Difference}\\
+&\textbf{(3)} && \quad \text{Def. of Difference  of Sets}\\
+&\textbf{(4)} && \quad \text{Def. of Union and Intersection of Sets}\\
+&\textbf{(5)} && \quad \text{Def. of Intersection  of Sets}\\
+&\textbf{(6)} && \quad \text{Absorption Law}\\
+&\textbf{(7)} && \quad \text{Associative Law}\\
+&\textbf{(8)} && \quad \text{Idempotent Law}\\
+&\textbf{(9)} && \quad \text{DeMorgan's Law}\\
+&\textbf{(10)} && \quad \text{Distributive Law}\\
+&\textbf{(11)} && \quad \text{Definition of Contradiction}\\
+&\textbf{(12)} && \quad \text{Law of Contradiction}\\
+&\textbf{(13)} && \quad \text{Def. of Difference of Sets, RHS}\\
+\end{alignat*}
+
+Below is the corresponding chain of justification for \textbf{Exercise 14(c)}.
+\begin{alignat*}{2}
+&\textbf{(1)} && \quad \text{RHS}\\
+&\textbf{(2)} && \quad \text{\textbf{Exercise 12} Associative Law}\\
+&\textbf{(3)} && \quad C \triangle (A \cap B) \equiv [C \setminus (A \cap B)] \cup [(A \cap B) \setminus C] \equiv [(A \cap B) \setminus C] \cup [C \setminus (A \cap B)] \equiv (A \cap B) \triangle C\\
+&\textbf{(4)} && \quad \text{\textbf{Exercise 12} Associative Law}\\
+&\textbf{(5)} && \quad \text{By Lemma 14(c), LHS}\\
+\end{alignat*}
+\pagebreak

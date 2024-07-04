@@ -1,0 +1,32 @@
+Simplify the following statements. Which variables are free and which are bound? If the statement has no free variables, say whether it is true or false.
+\begin{enumerate}[label=(\alph*)]
+    \item $w \in \{x \in \mathbb{R} \ | \ 13-2x > c \}$
+    \item $4 \in \{x \in \mathbb{R} \ | \ 13-2x \in \{y \ | \ y \ \text{is a prime number} \} \}$
+    \item $4 \in \{x \in  \{y \ | \ y \ \text{is a prime number} \} \ | \ 13-2x > 1 \}$
+\end{enumerate}
+
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+    \item $w \in \{x \in \mathbb{R} \ | \ 13-2x > c \} \rightarrow \bm{(w \in \mathbb{R}) \wedge (13-2w > c)}$.
+    
+    The bound variable is $x$, and the free variables are $w$ and $c$.
+    
+    \item $4 \in \{x \in \mathbb{R} \ | \ 13-2x \in \{y \ | \ y \ \text{is a prime number} \} \}$
+    
+    $\rightarrow \bm{(4 \in \mathbb{R}) \wedge (13-2(4) \in \{y \ | \ y \ \text{is a prime number} \})}$
+    
+    $\rightarrow \bm{(4 \in \mathbb{R}) \wedge (5 \ \text{is a prime number})}$.
+    
+    The bound variables are $x$ and $y$, there are no free variables, and the statement is true.
+    
+    \item $4 \in \{x \in  \{y \ | \ y \ \text{is a prime number} \} \ | \ 13-2x > 1 \}$
+    
+    $\rightarrow \bm{(4 \in \{y \ | \ y \ \text{is a prime number} \}) \wedge (13-2(4) > 1)}$
+    
+    $\rightarrow \bm{(4 \ \text{is a prime number}) \wedge (5 > 1)}$.
+    
+    The bound variables are $x$ and $y$, there are no free variables, and the statement is false since 4 is not a prime number.
+    
+\end{enumerate}
+
+\pagebreak

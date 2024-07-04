@@ -1,0 +1,18 @@
+% This is exercise.tex
+% Ex 6
+The sequence 3,5,7 is a list of three prime numbers such that each pair of adjacent numbers in the list differ by two. Are there any more such "triplet primes"?
+
+\doublespacing
+
+\textbf{Solution:} That is a unique sequence of triplet primes. No other sequence exists since any other triplet of numbers has exactly one term divisible by 3.
+
+\doublespacing
+
+Consider $(n,n+2,n+4)$ where $n$ is a positive integer.
+\begin{enumerate}
+    \item[] Case 1: If $n$ is divisible by three, then we are done.
+    \item[] Case 2: If $n$ has remainder 1 when divided by 3, then $n=3k+1$, so $n+2=3k+3=3(k+1)$ for some positive integer $k$.
+    \item[] Case 3: If $n$ has remainder 2 when divided by 3, then $n=3k+2$, so $n+4=3k+6=3(k+2)$ for some positive integer $k$.
+\end{enumerate}
+
+Hence for all values of $n$ greater than 3, we will always get at least one number in the triplet sequence that is divisible by 3, thus not prime. The proof above is not expected now, so revisit later when the tools have been learned.

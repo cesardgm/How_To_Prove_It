@@ -1,0 +1,35 @@
+Which of the following formulas are equivalent?
+\begin{enumerate}[label=(\alph*)]
+    \item $P \rightarrow (Q \rightarrow R)$.
+    \item $Q \rightarrow (P \rightarrow R)$.
+    \item $(P \rightarrow Q) \wedge (P \rightarrow R)$.
+    \item $(P \wedge Q) \rightarrow R$.
+    \item $P \rightarrow (Q \wedge R)$.
+\end{enumerate}
+
+
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+    \item We show that $P \rightarrow (Q \rightarrow R) \equiv (P \wedge Q) \rightarrow R$. 
+    \begin{alignat*}{2}
+        P \rightarrow (Q \rightarrow R) &\equiv \neg P \vee (Q \rightarrow R) && \quad \textbf{Conditional Law}\\
+        &\equiv \neg P \vee (\neg Q \vee R) && \quad \textbf{Conditional Law}\\
+        &\equiv (\neg P \vee \neg Q) \vee R && \quad \textbf{Associative Law}\\
+        &\equiv \neg (P \wedge Q) \vee R && \quad \textbf{DeMorgan's Law}\\
+        &\equiv (P \wedge Q) \rightarrow R && \quad \textbf{Conditional Law}\\
+    \end{alignat*}
+    \item We show that $Q \rightarrow (P \rightarrow R) \equiv (P \wedge Q) \rightarrow R$.
+    \begin{alignat*}{2}
+        Q \rightarrow (P \rightarrow R) &\equiv \neg Q \vee (P \rightarrow R) && \quad \textbf{Conditional Law}\\
+        &\equiv \neg Q \vee (\neg P \vee R) && \quad \textbf{Conditional Law}\\
+        &\equiv (\neg Q \vee \neg P) \vee R && \quad \textbf{Associative Law}\\
+        &\equiv \neg (Q \wedge P) \vee R && \quad \textbf{DeMorgan's Law}\\
+        &\equiv \neg (P \wedge Q) \vee R && \quad \textbf{Commutative Law}\\
+        &\equiv (P \wedge Q) \rightarrow R && \quad \textbf{Conditional Laws}\\
+    \end{alignat*}
+    \item We show that $(P \rightarrow Q) \wedge (P \rightarrow R) \equiv P \rightarrow (Q \wedge R)$ by \textbf{Lemma 7.a.2}.
+    \item $(P \wedge Q) \rightarrow R$.
+    \item $P \rightarrow (Q \wedge R)$.
+\end{enumerate}
+We conclude that by noting that exercises \textbf{10a, 10b, 10d} are all equivalent. \\
+And exercises \textbf{10c, 10e} are equivalent.

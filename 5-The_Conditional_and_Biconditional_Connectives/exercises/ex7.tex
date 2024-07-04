@@ -1,0 +1,77 @@
+\begin{enumerate}[label=(\alph*)]
+    \item Show that $(P \rightarrow Q) \wedge (Q \rightarrow R)$ is equivalent to $(P \rightarrow R) \wedge [(P \leftrightarrow Q) \vee (R \leftrightarrow Q)]$.
+    \item Show that $(P \rightarrow Q) \vee (Q \rightarrow R)$ is a tautology.
+\end{enumerate}
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+    \item Below we prove that $(P \rightarrow Q) \wedge (Q \rightarrow R) \equiv (P \rightarrow R) \wedge [(P \leftrightarrow Q) \vee (R \leftrightarrow Q)]$.\\
+
+    \
+    
+    First we prove \textbf{Lemma 7.a.1}: $(P \rightarrow Q) \wedge (Q \rightarrow R) \equiv [P \rightarrow (Q \wedge R)] \wedge (Q \rightarrow R)$.
+    \begin{alignat*}{2}
+        (P \rightarrow Q) \wedge (Q \rightarrow R) &\equiv (\neg P \vee Q) \wedge (\neg Q \vee R) && \quad \textbf{Conditional Law}\\
+        &\equiv [(\neg P \vee Q) \wedge \neg Q ]\vee [(\neg P \vee Q) \wedge R] && \quad \textbf{Distributive Law}\\
+        &\equiv [(\neg P \wedge \neg Q) \vee (Q \wedge \neg Q)]\vee [(\neg P \wedge R) \vee (Q \wedge R)] && \quad \textbf{Distributive Law}\\
+        &\equiv [(\neg P \wedge \neg Q) \vee \text{Contradiction}]\vee [(\neg P \wedge R) \vee (Q \wedge R)] && \quad \textbf{Def. of Contradiction}\\
+        &\equiv [\neg P \wedge \neg Q]\vee [(\neg P \wedge R) \vee (Q \wedge R)] && \quad \textbf{Law of Contradiction}\\
+        &\equiv (\neg P \wedge \neg Q) \vee (\neg P \wedge R) \vee (Q \wedge R) && \quad \textbf{Associtive Law}\\
+        &\equiv [(\neg P \wedge \neg Q) \vee (\neg P \wedge R)] \vee (Q \wedge R) && \quad \textbf{Associtive Law}\\
+        &\equiv [\neg P \wedge (\neg Q \vee R)] \vee (Q \wedge R) && \quad \textbf{Distributive Law}\\
+        &\equiv [\neg P \vee (Q \wedge R)] \wedge [(\neg Q \vee R) \vee (Q \wedge R)] && \quad \textbf{Distributive Law}\\
+        &\equiv [\neg P \vee (Q \wedge R)] \wedge \{[(\neg Q \vee R) \vee Q] \wedge [(\neg Q \vee R) \vee R]\} && \quad \textbf{Distributive Law}\\
+        &\equiv [\neg P \vee (Q \wedge R)] \wedge \{[(\neg Q \vee Q) \vee R] \wedge [\neg Q \vee (R \vee R)]\} && \quad \textbf{Associative/Commutative Laws}\\
+        &\equiv [\neg P \vee (Q \wedge R)] \wedge \{[(\neg Q \vee Q) \vee R] \wedge (\neg Q \vee R)\} && \quad \textbf{Idempotent Law}\\
+        &\equiv [\neg P \vee (Q \wedge R)] \wedge \{[\text{Tautology} \vee R] \wedge (\neg Q \vee R)\} && \quad \textbf{Def. of Tautology}\\
+        &\equiv [\neg P \vee (Q \wedge R)] \wedge [\text{Tautology} \wedge (\neg Q \vee R)] && \quad \textbf{Law of Tautology}\\
+        &\equiv [\neg P \vee (Q \wedge R)] \wedge (\neg Q \vee R) && \quad \textbf{Law of Tautology}\\
+        &\equiv [P \rightarrow (Q \wedge R)] \wedge (Q \rightarrow R) && \quad \textbf{Conditional Law}\\
+    \end{alignat*}
+    We also prove \textbf{Lemma 7.a.2}: $(P \rightarrow Q) \wedge (P \rightarrow R) \equiv [P \rightarrow (Q \wedge R)]$.
+    \begin{alignat*}{2}
+        (P \rightarrow Q) \wedge (P \rightarrow R) &\equiv (\neg P \vee Q) \wedge (\neg P \vee R) && \quad \textbf{Conditional law}\\
+        &\equiv \neg P \vee (Q \wedge R) && \quad \textbf{Distributive law}\\
+        &\equiv P \rightarrow (Q \wedge R) && \quad \textbf{Conditional law}\\
+    \end{alignat*}
+    We also prove \textbf{Lemma 7.a.3}: $Q \rightarrow Q \equiv \text{Tautology}$.
+    \begin{alignat*}{2}
+        Q \rightarrow Q &\equiv \neg Q \vee Q && \quad \textbf{Conditional law}\\
+        &\equiv \text{Tautology} && \quad \textbf{Definition of Tautology}\\
+    \end{alignat*}
+    \pagebreak
+
+    Proof of \textbf{7.a}:
+    \begin{alignat*}{2}
+        &(P \rightarrow R) \wedge [(P \leftrightarrow Q) \vee (R \leftrightarrow Q)] && \quad \textbf{RHS}\\
+        &\equiv (P \rightarrow R) \wedge \{[(P \wedge Q) \vee (\neg P \wedge \neg Q)] \vee [(R \wedge Q) \vee (\neg R \wedge \neg Q)]\} && \quad \textbf{Exercise 5.a}\\
+        &\equiv (P \rightarrow R) \wedge \{[(P \wedge Q) \vee (R \wedge Q)] \vee [(\neg P \wedge \neg Q) \vee (\neg R \wedge \neg Q)]\} && \quad \textbf{Associative/Commutative Laws}\\
+        &\equiv (P \rightarrow R) \wedge \{[(P \vee R) \wedge Q] \vee [(\neg P \vee \neg R) \wedge \neg Q]\} && \quad \textbf{Distributive Law}\\
+        &\equiv \{(P \rightarrow R) \wedge [(P \vee R) \wedge Q]\} \vee \{(P \rightarrow R) \wedge [(\neg P \vee \neg R) \wedge \neg Q]\} && \quad \textbf{Distributive Law}\\
+        &\equiv [(P \rightarrow R) \wedge (P \vee R) \wedge Q] \vee [(P \rightarrow R) \wedge (\neg P \vee \neg R) \wedge \neg Q] && \quad \textbf{Associative Law}\\
+        &\equiv [(\neg P \vee R) \wedge (P \vee R) \wedge Q] \vee [(\neg P \vee R) \wedge (\neg P \vee \neg R) \wedge \neg Q] && \quad \textbf{Conditional Law}\\
+        &\equiv [\{(\neg P \vee R) \wedge (P \vee R)\} \wedge Q] \vee [\{(\neg P \vee R) \wedge (\neg P \vee \neg R)\} \wedge \neg Q] && \quad \textbf{Associative Law}\\
+        &\equiv [\{(\neg P \wedge P) \vee R)\} \wedge Q] \vee [\{\neg P \vee (R \wedge \neg R)\} \wedge \neg Q] && \quad \textbf{Distributive Law}\\
+        &\equiv [\{\text{Contradiction} \vee R)\} \wedge Q] \vee [\{\neg P \vee \text{Contradiction}\} \wedge \neg Q] && \quad \textbf{Def. of Contradiction}\\
+        &\equiv [R \wedge Q] \vee [\neg P \wedge \neg Q] && \quad \textbf{Law of Contradiction}\\
+        &\equiv [(R \wedge Q) \vee \neg P] \wedge [(R \wedge Q) \vee \neg Q] && \quad \textbf{Distributive Law}\\
+        &\equiv [\neg P \vee (R \wedge Q)] \wedge [\neg Q \vee (R \wedge Q)] && \quad \textbf{Commutative Law}\\
+        &\equiv [P \rightarrow (R \wedge Q)] \wedge [Q \rightarrow (R \wedge Q)] && \quad \textbf{Conditional Law}\\
+        &\equiv [(P \rightarrow R) \wedge (P \rightarrow Q)] \wedge [(Q \rightarrow R) \wedge (Q \rightarrow Q)] && \quad \textbf{Lemma 7.a.2}\\
+        &\equiv [(P \rightarrow R) \wedge (P \rightarrow Q)] \wedge [(Q \rightarrow R) \wedge \text{Tautology}] && \quad \textbf{Lemma 7.a.3}\\
+        &\equiv [(P \rightarrow R) \wedge (P \rightarrow Q)] \wedge (Q \rightarrow R) && \quad \textbf{Law of Tautology}\\
+        &\equiv [P \rightarrow (R \wedge Q)] \wedge (Q \rightarrow R) && \quad \textbf{Lemma 7.a.2}\\
+        &\equiv (P \rightarrow Q) \wedge (Q \rightarrow R) && \quad \textbf{Lemma 7.a.1}\\
+    \end{alignat*}
+
+    \item We prove that $(P \rightarrow Q) \vee (Q \rightarrow R) \equiv \text{Tautology}$.
+    \begin{alignat*}{2}
+        (P \rightarrow Q) \vee (Q \rightarrow R) &\equiv (\neg P \vee Q) \vee (\neg Q \vee R) && \quad \textbf{Conditional Law}\\
+        &\equiv \neg P \vee Q \vee \neg Q \vee R && \quad \textbf{Associative Law}\\
+        &\equiv \neg P \vee (Q \vee \neg Q) \vee R && \quad \textbf{Associative Law}\\
+        &\equiv \neg P \vee \text{Tautology} \vee R && \quad \textbf{Def. of Tautology}\\
+        &\equiv \text{Tautology} \vee \neg P \vee R && \quad \textbf{Commutative Law}\\
+        &\equiv \text{Tautology} \vee (\neg P \vee R) && \quad \textbf{Associative Law}\\
+        &\equiv \text{Tautology} && \quad \textbf{Tautology Law}\\
+    \end{alignat*}
+\end{enumerate}
+\pagebreak

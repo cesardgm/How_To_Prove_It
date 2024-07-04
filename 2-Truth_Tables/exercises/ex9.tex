@@ -1,0 +1,50 @@
+Use truth tables to determine which of these statements are tautologies, which are contradictions, and which are neither:
+\begin{enumerate}[label=(\alph*)]
+    \item $(P \vee Q) \wedge (\neg P \vee \neg Q).$
+    \item $(P \vee Q) \wedge (\neg P \wedge \neg Q).$
+    \item $(P \vee Q) \vee (\neg P \vee \neg Q).$
+    \item $[P \wedge (Q \vee \neg R)] \vee (\neg P \vee R).$
+\end{enumerate}
+
+\textbf{Solution:} Recall that a contradiction is always false for all combination of truth values for its inputs. Similarly, a tautology is always true for all combination of truth values for its inputs.
+Consider the following substitutions.
+\begin{itemize}
+    \item $A$: $(P \vee Q) \wedge (\neg P \vee \neg Q)$.
+    \item $B$: $(P \vee Q) \wedge (\neg P \wedge \neg Q)$.
+    \item $C$: $(P \vee Q) \vee (\neg P \vee \neg Q)$.
+    \item $D$: $[P \wedge (Q \vee \neg R)] \vee (\neg P \vee R)$.
+\end{itemize}
+
+\[
+\begin{array}{|cc||c|c|c|}
+\hline
+P & Q & A & \color{red}{B} & \color{blue}{C} \\
+\hline
+T & T & F & \color{red}{F} & \color{blue}{T} \\
+T & F & T & \color{red}{F} & \color{blue}{T} \\
+F & T & T & \color{red}{F} & \color{blue}{T} \\
+F & F & F & \color{red}{F} & \color{blue}{T} \\
+\hline
+\end{array}
+\]
+
+We have already determined that $A$ is neither a tautology or contradiction; $B$ is a contradiction, $C$ is a tautology. \
+
+Finally, we take on $D$ exclusively and the truth table shows it is a tautology.
+\[
+\begin{array}{|ccc||ccc||c|}
+\hline
+P & Q & R & Q \vee \neg R & P \wedge (Q \vee \neg R) & \neg P \vee R & [P \wedge (Q \vee \neg R)] \vee (\neg P \vee R)\\
+F & F & F & T & F & T & T \\
+F & F & T & F & F & T & T \\
+F & T & F & T & F & T & T \\
+F & T & T & T & F & T & T \\
+T & F & F & T & T & F & T \\
+T & F & T & F & F & T & T \\
+T & T & F & T & T & F & T \\
+T & T & T & T & T & T & T \\
+\hline
+\end{array}
+\]
+
+\pagebreak

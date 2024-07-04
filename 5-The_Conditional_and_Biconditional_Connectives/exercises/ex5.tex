@@ -1,0 +1,28 @@
+\begin{enumerate}[label=(\alph*)]
+    \item Show that $P \leftrightarrow Q$ is equivalent to $(P \wedge Q) \vee (\neg P \wedge \neg Q)$.
+    \item Show that $(P \rightarrow Q) \vee (P \rightarrow R)$ is equivalent to $P \rightarrow (Q \vee R)$.
+\end{enumerate}
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+    \item Below we prove that $P \leftrightarrow Q \equiv (P \wedge Q) \vee (\neg P \wedge \neg Q)$.
+    \begin{alignat*}{2}
+        (P \wedge Q) \vee (\neg P \wedge \neg Q) &\equiv [(P \wedge Q) \vee \neg P] \wedge [(P \wedge Q) \vee \neg Q] && \quad \textbf{Distributive Law}\\
+        &\equiv [(P \vee \neg P) \wedge (Q \vee \neg P)] \wedge [(P \vee \neg Q) \wedge (Q \vee \neg Q)] && \quad \textbf{Distributive Law}\\
+        &\equiv [\text{Tautology} \wedge (Q \vee \neg P)] \wedge [(P \vee \neg Q) \wedge \text{Tautology}] && \quad \textbf{Def. of Tautology}\\
+        &\equiv (Q \vee \neg P) \wedge (P \vee \neg Q) && \quad \textbf{Law of Tautology}\\
+        &\equiv (\neg P \vee Q) \wedge (\neg Q \vee P) && \quad \textbf{Commutative Law}\\
+        &\equiv (P \rightarrow Q) \wedge (Q \rightarrow P) && \quad \textbf{Conditional Law}\\
+        &\equiv P \leftrightarrow Q && \quad \textbf{Biconditional Law}\\
+    \end{alignat*}
+    
+    \item Below we prove that $(P \rightarrow Q) \vee (P \rightarrow R) \equiv P \rightarrow (Q \vee R)$.
+    \begin{alignat*}{2}
+        (P \rightarrow Q) \vee (P \rightarrow R) &\equiv (\neg P \vee Q) \vee (\neg P \vee R) && \quad \textbf{Conditional Law}\\
+        &\equiv \neg P \vee Q \vee \neg P \vee R && \quad \textbf{Associative Law}\\
+        &\equiv \neg P \vee \neg P \vee Q \vee R && \quad \textbf{Commutative Law}\\
+        &\equiv (\neg P \vee \neg P) \vee (Q \vee R) && \quad \textbf{Associative Law}\\
+        &\equiv \neg P \vee (Q \vee R) && \quad \textbf{Idempotent Law}\\
+        &\equiv P \rightarrow (Q \vee R) && \quad \textbf{Conditional Law}\\
+    \end{alignat*}
+\end{enumerate}
+\pagebreak

@@ -1,0 +1,73 @@
+Analyze the logical form of the following statement:
+\begin{enumerate}[label=(\alph*)]
+    \item If it is raining, then it is windy and the sun is not shining.
+
+    Now analyze the following statements. Also, for each statement determine whether the statement is equivalent to either statement (a) or its converse.
+
+    \item It is windy and not sunny only if it is raining.
+    \item Rain is a sufficient condition for wind with no sunshine.
+    \item Rain is a necessary condition for wind with no sunshine.
+    \item It's not raining, if either the sun is shining or it's not windy.
+    \item Wind is a necessary condition for it to be rainy, and so is a lack of sunshine.
+    \item Either it is windy only if it is raining, or it is not sunny only if it is raining.
+\end{enumerate}
+
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+    \item Let the following symbols represent the corresponding statements:
+        \begin{itemize}
+        \item $R$: It is raining
+        \item $W$: It is windy
+        \item $S$: The sun is shining
+        \end{itemize}
+        The logical form of the original statement can be expressed as:
+        $$R \rightarrow (W \wedge \neg S)$$
+        The converse of the statement can be expressed as:
+        $$(W \wedge \neg S) \rightarrow R $$
+        If we let $P = (W \wedge \neg S)$ and $Q = R$, then the converse can be stated in various equivalent ways:
+        \begin{itemize}
+        \item If it is windy and the sun is not shining, then it is raining. (P implies Q)
+        \item It is raining, if it is windy and the sun is not shining. (Q, if P)
+        \item It is windy and the sun is not shining only if it is raining. (P only if Q)
+        \item Being windy and the sun not shining is a sufficient condition for it to be raining. (P is a sufficient condition for Q)
+        \item That it is raining is a necessary condition for it to be windy and the sun not to shine. (Q is a necessary condition for P)
+        \item It is a necessary condition for it to be windy and the sun not shining that it is raining (Exercise 1d).
+        \end{itemize}
+    \pagebreak
+    
+    \item "It is windy and not sunny only if it is raining" can be expressed as: $$(W \wedge \neg S) \rightarrow R.$$
+    \item "Rain is a sufficient condition for wind with no sunshine" can be expressed as: $$R \rightarrow (W \wedge \neg S).$$
+    \item "Rain is a necessary condition for wind with no sunshine" can be expressed as: $$(W \wedge \neg S) \rightarrow R.$$
+    \item "It's not raining, if either the sun is shining or it's not windy" can be expressed as: 
+        \begin{alignat*}{2}
+        (\neg W \vee S) & \rightarrow \neg R && \quad \textbf{Conditional statement}\\
+        \neg (\neg W \vee S) & \vee \neg R && \quad \textbf{Conditional Law}\\
+        (W \wedge \neg S) & \vee \neg R && \quad \textbf{DeMorgan's Law}\\
+        \neg R &\vee (W \wedge \neg S) && \quad \textbf{Commutative Law}\\
+        R &\rightarrow (W \wedge \neg S) && \quad \textbf{Conditional Law}\\
+        \end{alignat*}
+    \item "Wind is a necessary condition for it to be rainy, and so is a lack of sunshine" can be expressed as: 
+        \begin{alignat*}{2}
+            (R \rightarrow W) &\wedge (R \rightarrow \neg S) && \quad \textbf{Compound sentence} \\   
+            (\neg R \vee W) &\wedge (\neg R \vee \neg S) && \quad \textbf{Conditional Law} \\  
+            \neg R &\vee (W \wedge \neg S) && \quad \textbf{Distributive law} \\  
+            R &\rightarrow (W \wedge \neg S) && \quad \textbf{Conditional Law} \\
+        \end{alignat*}
+    
+    \item "Either it is windy only if it is raining, or it is not sunny only if it is raining" can be expressed as:
+        \begin{alignat*}{2}
+            (W \rightarrow R) &\vee (\neg S \rightarrow R) && \quad \textbf{Compound sentence}\\
+            (\neg W \vee R) &\vee (S \vee R) && \quad \textbf{Conditional Law}\\
+            \neg W \vee R &\vee S \vee R && \quad \textbf{Associative law}\\
+            R \vee R &\vee \neg W \vee S && \quad \textbf{Commutative law}\\
+            (R \vee R) &\vee (\neg W \vee S) && \quad \textbf{Associative law}\\
+            R &\vee (\neg W \vee S) && \quad \textbf{Idempotent law}\\
+            \neg R &\rightarrow (\neg W \vee S) && \quad \textbf{Conditional Law}\\
+            (W \wedge \neg S) &\rightarrow R && \quad \textbf{Contrapositive}\\
+        \end{alignat*}
+\end{enumerate}
+
+We observe that the original statement \textbf{3a} is logically equivalent with statements \textbf{3c, 3e and 3f}. \\
+We observe that the converse of statement \textbf{3a} is logically equivalent with statements \textbf{3b, 3d, and 3g}.
+
+\pagebreak

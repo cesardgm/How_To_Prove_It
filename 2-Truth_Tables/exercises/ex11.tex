@@ -1,0 +1,39 @@
+Use the laws stated in the text to find simpler formulas equivalent to these formulas.
+\begin{enumerate}[label=(\alph*)]
+    \item $\neg (\neg P \wedge \neg Q).$
+    \item $(P \wedge Q) \vee (P \wedge \neg Q).$
+    \item $\neg (P \wedge \neg Q) \vee (\neg P \wedge Q).$
+\end{enumerate}
+
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+    \item \textbf{$\bm{\neg (\neg P \wedge \neg Q) \equiv P \vee Q.}$}
+        \begin{alignat*}{2}
+            \neg (\neg P \wedge \neg Q) & \equiv \neg \neg P \vee \neg \neg Q && \quad \text{(DeMorgan's Law)} \\
+            & \equiv P \vee Q && \quad \text{(Double Negation Law)}
+        \end{alignat*}
+
+    \item \textbf{$\bm{(P \wedge Q) \vee (P \wedge \neg Q) \equiv P.}$}
+        \begin{alignat*}{2}
+            (P \wedge Q) \vee (P \wedge \neg Q) & \equiv ((P \wedge Q) \vee P) \wedge ((P \wedge Q) \vee \neg Q) && \quad \text{(Distributive Law)}\\
+            &\equiv P \wedge ((P \wedge Q) \vee \neg Q) && \quad \text{(Absorption Law)} \\
+            &\equiv P \wedge [(P \vee \neg Q) \wedge (Q \vee \neg Q)] && \quad \text{(Distributive Law)} \\
+            &\equiv P \wedge [(P \vee \neg Q) \wedge \text{Tautology}] && \quad \text{(Definition of Tautology)} \\
+            &\equiv P \wedge (P \vee \neg Q]) && \quad \text{(Tautology Law)} \\
+            &\equiv P && \quad \text{(Absorption Law)}
+        \end{alignat*}
+
+    \item \textbf{$\bm{\neg (P \wedge \neg Q) \vee (\neg P \wedge Q) \equiv \neg P \vee Q.}$}
+        \begin{alignat*}{2}
+            \neg (P \wedge \neg Q) \vee (\neg P \wedge Q) &\equiv (\neg P \vee \neg \neg Q) \vee (\neg P \wedge Q) && \quad \text{(DeMorgan's Law)} \\
+            &\equiv (\neg P \vee Q) \vee (\neg P \wedge Q) && \quad \text{(Double Negation Law)} \\ 
+            &\equiv [(\neg P \vee Q) \vee \neg P] \wedge [(\neg P \vee Q) \vee Q)] && \quad \text{(Distributive Law)} \\ 
+            &\equiv [\neg P \vee Q \vee \neg P] \wedge [\neg P \vee Q \vee Q] && \quad \text{(Associative Law)} \\ 
+            &\equiv [\neg P \vee \neg P \vee Q] \wedge [\neg P \vee Q \vee Q] && \quad \text{(Commutative Law)} \\ 
+            &\equiv [(\neg P \vee \neg P) \vee Q] \wedge [\neg P \vee (Q \vee Q)] && \quad \text{(Associative Law)} \\ 
+            &\equiv (\neg P \vee Q) \wedge (\neg P \vee Q) && \quad \text{(Idempotent Law)} \\ 
+            &\equiv \neg P \vee Q && \quad \text{(Idempotent Law)} \\ 
+        \end{alignat*}
+\end{enumerate}
+
+\pagebreak

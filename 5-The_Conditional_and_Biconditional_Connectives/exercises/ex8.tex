@@ -1,0 +1,18 @@
+Find a formula involving only the connectives $\neg$ and $\rightarrow$ that is equivalent to $P \wedge Q$.
+
+\textbf{Solution:} I contend that $P \wedge Q \equiv \neg [(P \rightarrow Q) \rightarrow \neg P]$.
+    \[
+    \begin{array}{|c|c||c|||c|c|c|||c|}
+    \hline
+    P & Q & P \wedge Q & P \rightarrow Q & \neg P & (P \rightarrow Q) \rightarrow \neg P & \neg [(P \rightarrow Q) \rightarrow \neg P]\\
+    \hline
+    0 & 0 & 0 & 1 & 1 & 1 & 0\\
+    0 & 1 & 0 & 1 & 1 & 1 & 0\\
+    1 & 0 & 0 & 0 & 0 & 1 & 0\\
+    1 & 1 & 1 & 1 & 0 & 0 & 1\\
+    \hline
+    \end{array}
+    \]
+
+
+\pagebreak

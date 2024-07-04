@@ -1,0 +1,91 @@
+Some mathematicians use the symbol $\downarrow$ to mean \textit{nor}. In other words, $P \downarrow Q$ means "neither $P$ nor $Q$".
+\begin{enumerate}[label=(\alph*)]
+    \item Make a truth table for $P \downarrow Q$.
+    \item Find a formula using only the connectives $\wedge$, $\vee$, and $\neg$ that is equivalent to $P \downarrow Q$.
+    \item Find formulas using only the connective $\downarrow$ that are equivalent to $\neg P$, $P \vee Q$, and $P \wedge Q$.
+\end{enumerate}
+
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+\item 
+    \[
+    \begin{array}{|c|c|c|}
+    \hline
+    P & Q & P \downarrow Q \\
+    \hline
+    \text{False} & \text{False} & \text{True} \\
+    \text{False} & \text{True} & \text{False} \\
+    \text{True} & \text{False} & \text{False} \\
+    \text{True} & \text{True} & \text{False} \\
+    \hline
+    \end{array}
+    \]
+
+\item The formula $\neg P \wedge \neg Q$ is equivalent to $P \downarrow Q$ since for every possible combination of truth values for the propositions, the truth values of both formulas are the same. 
+\[
+\begin{array}{|c|c|c|c|c||c|}
+\hline
+P & Q & \neg P & \neg Q & \neg P \wedge \neg Q & P \downarrow Q \\
+\hline
+\text{False} & \text{False} & \text{True} & \text{True} & \text{True} & \text{True} \\
+\text{False} & \text{True} & \text{True} & \text{False} & \text{False} & \text{False} \\
+\text{True} & \text{False} & \text{False} & \text{True} & \text{False} & \text{False} \\
+\text{True} & \text{True} & \text{False} & \text{False} & \text{False} & \text{False} \\
+\hline
+\end{array}
+\]
+
+\pagebreak
+
+\item \begin{itemize}
+    \item The formula $P \downarrow P$ is equivalent to $\neg P$.
+    \[
+    \begin{array}{|c|c|c||c|}
+    \hline
+    P & P & P \downarrow P & \neg P \\
+    \hline
+    \text{False} & \text{False} & \text{True} & \text{True}\\
+    \text{True} & \text{True} & \text{False} & \text{False} \\
+    \hline
+    \end{array}
+    \]
+
+    \item The formula $(P \downarrow Q) \downarrow (P \downarrow Q)$ is equivalent to $\neg (P \downarrow Q)$ (using the result from above, i.e., $\neg P \equiv P \downarrow P$), hence equivalent to $P \vee Q$. We justify the answer with our truth table.
+    \[
+    \begin{array}{|c|c|c|c||c|}
+    \hline
+    P & Q & P \downarrow Q & \neg (P \downarrow Q) & P \vee Q \\
+    \hline
+    \text{False} & \text{False} & \text{True} & \text{False} & \text{False}\\
+    \text{False} & \text{True} & \text{False} & \text{True} & \text{True} \\
+    \text{True} & \text{False} & \text{False} & \text{True} & \text{True} \\
+    \text{True} & \text{True} & \text{False} & \text{True} & \text{True} \\
+    \hline
+    \end{array}
+    \]
+
+    \item The formula $(P \downarrow P) \downarrow (Q \downarrow Q)$ is equivalent to $P \wedge Q$.
+    \begin{alignat*}{2}
+        P \wedge Q & \equiv \neg \neg P \wedge \neg \neg Q && \quad \text{(Double Negation Law)} \\
+                   & \equiv \neg (\neg P \vee \neg Q) && \quad \text{(DeMorgan's Law)} \\
+                   & \equiv \neg \neg (\neg P \downarrow \neg Q) && \quad \text{(Results Above: $\neg(P \downarrow Q) \equiv P \vee Q$)} \\
+                   & \equiv \neg P \downarrow \neg Q && \quad \text{(Double Negation Law)} \\
+                   & \equiv (P \downarrow P) \downarrow (Q \downarrow Q) && \quad \text{(Results Above: $\neg P \equiv P \downarrow P$)}
+    \end{alignat*}
+    We also justify our answer with a truth table.
+    \[
+    \begin{array}{|c|c|c|c|c||c|}
+    \hline
+    P & Q & P \downarrow P & Q \downarrow Q & (P \downarrow P) \downarrow (Q \downarrow Q) & P \wedge Q \\
+    \hline
+    \text{True} & \text{True} & \text{False} & \text{False} & \text{True} & \text{True} \\
+    \text{True} & \text{False} & \text{False} & \text{True} & \text{False} & \text{False} \\
+    \text{False} & \text{True} & \text{True} & \text{False} & \text{False} & \text{False} \\      
+    \text{False} & \text{False} & \text{True} & \text{True} & \text{False} & \text{False} \\
+    \hline
+    \end{array}
+    \]
+\end{itemize}
+\end{enumerate}
+
+\pagebreak

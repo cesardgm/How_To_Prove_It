@@ -1,0 +1,62 @@
+Use truth tables to check these laws:
+\begin{enumerate}[label=(\alph*)]
+    \item The second DeMorgan's law.
+    \item The distributive laws.
+\end{enumerate}
+
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+    \item Observe that the truth values are identical for both formulas.
+    
+\[
+\begin{array}{|cc||c|c|}
+\hline
+P & Q & \neg (P \vee Q) & \neg P \wedge \neg Q\\
+\hline
+F & F & T & T \\
+F & T & F & F \\
+F & T & F & F \\
+T & T & F & F \\
+\hline
+\end{array}
+\]
+
+\item Observe that the truth values are identical for each pair of formulas.
+\[
+\begin{array}{|ccc||c|c|}
+\hline
+P & Q & R & P \wedge (Q \vee R) & (P \wedge Q) \vee (P \wedge R) \\
+\hline
+F & F & F & F & F \\
+F & F & T & F & F \\
+F & T & F & F & F \\
+F & T & T & F & F \\
+T & F & F & F & F \\
+T & F & T & T & T \\
+T & T & F & T & T \\
+T & T & T & T & T \\
+\hline
+\end{array}
+\]
+
+\
+
+\[
+\begin{array}{|ccc||c|c|}
+\hline
+P & Q & R & P \vee (Q \wedge R) & (P \vee Q) \wedge (P \vee R) \\
+\hline
+F & F & F & F & F \\
+F & F & T & F & F \\
+F & T & F & F & F \\
+F & T & T & T & T \\
+T & F & F & T & T \\
+T & F & T & T & T \\
+T & T & F & T & T \\
+T & T & T & T & T \\
+\hline
+\end{array}
+\]
+\end{enumerate}
+
+\pagebreak

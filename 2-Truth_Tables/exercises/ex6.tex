@@ -1,0 +1,92 @@
+Some mathematicians write $P | Q$ to mean "$P$ and $Q$ are not both true". This connective is called \textit{nand}, and is used in the study of circuits in computer science.
+\begin{enumerate}[label=(\alph*)]
+\item Make a truth table for $P | Q$.
+\item Find a formula using only the connectives $\wedge$, $\vee$, and $\neg$ that is equivalent to $P | Q$.
+\item Find formulas using only the connective $|$ that are equivalent to $\neg P$, $P \vee Q$, and $P \wedge Q$.
+\end{enumerate}
+
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+\item 
+\[
+\begin{array}{|c|c|c|}
+\hline
+P & Q & P | Q \\
+\hline
+\text{False} & \text{False} & \text{True} \\
+\text{False} & \text{True} & \text{True} \\
+\text{True} & \text{False} & \text{True} \\
+\text{True} & \text{True} & \text{False} \\
+\hline
+\end{array}
+\]
+
+\item The formula $\neg (P \wedge Q)$ is equivalent to $P | Q$ since for every possible combination of truth values for the propositions, the truth values of both formulas are the same. 
+
+\[
+\begin{array}{|c|c|c|c||c|}
+\hline
+P & Q & P \wedge Q & \neg (P \wedge Q) & P | Q \\
+\hline
+\text{False} & \text{False} & \text{False} & \text{True} & \text{True} \\
+\text{False} & \text{True} & \text{False} & \text{True} & \text{True} \\
+\text{True} & \text{False} & \text{False} & \text{True} & \text{True} \\
+\text{True} & \text{True} & \text{True} & \text{False} & \text{False} \\
+\hline
+\end{array}
+\]
+
+\pagebreak
+
+\item \begin{itemize}
+    \item The formula $P | P$ is equivalent to $\neg P$.
+    \[
+    \begin{array}{|c|c|c||c|}
+    \hline
+    P & P & P | P & \neg P \\
+    \hline
+    \text{False} & \text{False} & \text{True} & \text{True}\\
+    \text{True} & \text{True} & \text{False} & \text{False} \\
+    \hline
+    \end{array}
+    \]
+
+    \item The formula $(P | Q) | (P | Q)$ is equivalent to $\neg (P | Q)$ (using the result from above, i.e., $\neg P \equiv P | P$), hence equivalent to $P \wedge Q$. We justify the answer with our truth table.
+    \[
+    \begin{array}{|c|c|c|c||c|}
+    \hline
+    P & Q & P | Q & \neg (P | Q) & P \wedge Q \\
+    \hline
+    \text{False} & \text{False} & \text{True} & \text{False} & \text{False}\\
+    \text{False} & \text{True} & \text{True} & \text{False} & \text{False} \\
+    \text{True} & \text{False} & \text{True} & \text{False} & \text{False} \\
+    \text{True} & \text{True} & \text{False} & \text{True} & \text{True} \\
+    \hline
+    \end{array}
+    \]
+
+    \item The formula $(P | P) | (Q | Q)$ is equivalent to $P \vee Q$.
+    \begin{alignat*}{2}
+        P \vee Q & \equiv \neg \neg P \vee \neg \neg Q && \quad \text{(Double Negation Law)} \\
+                   & \equiv \neg (\neg P \wedge \neg Q) && \quad \text{(DeMorgan's Law)} \\
+                   & \equiv \neg \neg (\neg P | \neg Q) && \quad \text{(Results Above: $\neg(P | Q) \equiv P \wedge Q$)} \\
+                   & \equiv \neg P | \neg Q && \quad \text{(Double Negation Law)} \\
+                   & \equiv (P | P) | (Q | Q) && \quad \text{(Results Above: $\neg P \equiv P | P$)}
+    \end{alignat*}
+    We also justify our answer with a truth table.
+    \[
+    \begin{array}{|c|c|c|c|c||c|}
+    \hline
+    P & Q & P | P & Q | Q & (P | P) | (Q | Q) & P \vee Q \\
+    \hline
+    \text{True} & \text{True} & \text{False} & \text{False} & \text{True} & \text{True} \\
+    \text{True} & \text{False} & \text{False} & \text{True} & \text{True} & \text{True} \\
+    \text{False} & \text{True} & \text{True} & \text{False} & \text{True} & \text{True} \\      
+    \text{False} & \text{False} & \text{True} & \text{True} & \text{False} & \text{False} \\
+    \hline
+    \end{array}
+    \]
+\end{itemize}
+\end{enumerate}
+
+\pagebreak

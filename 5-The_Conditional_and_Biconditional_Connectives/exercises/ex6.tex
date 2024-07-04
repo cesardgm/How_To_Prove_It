@@ -1,0 +1,26 @@
+\begin{enumerate}[label=(\alph*)]
+    \item Show that $(P \rightarrow R) \wedge (Q \rightarrow R)$ is equivalent to $(P \vee Q) \rightarrow R$.
+    \item Formulate and verify a similar equivalence involving $(P \rightarrow R) \vee (Q \rightarrow R)$.
+\end{enumerate}
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+    \item Below we prove that $(P \rightarrow R) \wedge (Q \rightarrow R) \equiv (P \vee Q) \rightarrow R$.
+    \begin{alignat*}{2}
+        (P \rightarrow R) \wedge (Q \rightarrow R) &\equiv (\neg P \vee R) \wedge (\neg Q \vee R) && \quad \textbf{Conditional Law}\\
+        &\equiv (\neg P \wedge \neg Q) \vee R && \quad \textbf{Distributive Law}\\
+        &\equiv \neg (P \vee Q) \vee R && \quad \textbf{DeMorgan's Law}\\
+        &\equiv (P \vee Q) \rightarrow R && \quad \textbf{Conditional Law}\\
+    \end{alignat*}
+
+    \item Below we prove that $(P \rightarrow R) \vee (Q \rightarrow R) \equiv (P \wedge Q) \rightarrow R$.
+    \begin{alignat*}{2}
+        (P \rightarrow R) \vee (Q \rightarrow R) &\equiv (\neg P \vee R) \vee (\neg Q \vee R) && \quad \textbf{Conditional Law}\\
+        &\equiv \neg P \vee R \vee \neg Q \vee R && \quad \textbf{Associative Law}\\
+        &\equiv \neg P \vee \neg Q \vee R \vee R && \quad \textbf{Commutative Law}\\
+        &\equiv (\neg P \vee \neg Q) \vee (R \vee R) && \quad \textbf{Associative Law}\\
+        &\equiv (\neg P \vee \neg Q) \vee R && \quad \textbf{Idempotent Law}\\
+        &\equiv \neg (P \wedge Q) \vee R && \quad \textbf{DeMorgan's Law}\\
+        &\equiv (P \wedge Q) \rightarrow R && \quad \textbf{Conditional Law}\\
+    \end{alignat*}
+\end{enumerate}
+\pagebreak

@@ -1,0 +1,16 @@
+Analyze the logical forms of the following statements:
+\begin{enumerate}[label=(\alph*)]
+    \item If this gas either has an unpleasant smell or is not explosive, then it isn't hydrogen.
+    \item Having both a fever and a headache is a sufficient condition for George to go to the doctor.
+    \item Both having a fever and having a headache are sufficient conditions for George to go to the doctor.
+    \item If $x \neq 2$, then a necessary condition for $x$ to be prime is that $x$ be odd.
+\end{enumerate}
+
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+    \item Let $U$ stand for the statement "\textbf{gas has an unpleasant smell}" and $E$ stand for "\textbf{gas is explosive}", and $H$ stand for "\textbf{gas is hydrogen}". Then the logical form of the statement given can be expressed as $(U \vee \neg E) \rightarrow \neg H$.
+    \item Let $F$ stand for the statement "\textbf{George has a fever}", $H$ stand for "\textbf{George has a headache}", and $D$ stand for "\textbf{George has to go to the doctor}". Then the logical form of the statement given can be expressed as $(F \wedge H)\rightarrow D$.
+    \item Let $F$ stand for the statement "\textbf{George has a fever}", $H$ stand for "\textbf{George has a headache}", and $D$ stand for "\textbf{George has to go to the doctor}". Then the logical form of the statement given can be expressed as $(F \rightarrow D) \wedge (H \rightarrow D)$.
+    \item Let $T$ stand for the statement \bm{$x \neq 2$}, let $P(x)$ stand for "\textbf{$x$ is prime}" and let $O(x)$ stand for "\textbf{$x$ is odd}". Then the logical form of the statement given can be expressed as $[T \wedge P(x)] \rightarrow O(x)$, or $T \rightarrow [P(x) \rightarrow O(x)]$.
+\end{enumerate}
+\pagebreak

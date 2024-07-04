@@ -1,0 +1,38 @@
+In this exercise we will use the symbol $+$ to mean \textit{exclusive or}. In other words, $P+Q$ means "$P$ or $Q$, but not both".
+\begin{enumerate}[label=(\alph*)]
+    \item Make a truth table for $P + Q$.
+    \item Find a formula using only the connectives $\wedge$, $\vee$, and $\neg$ that is equivalent to $P+Q$. Justify your answer with a truth table.
+\end{enumerate}
+
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+\item 
+    \[
+    \begin{array}{|c|c|c|}
+    \hline
+    P & Q & P + Q \\
+    \hline
+    \text{False} & \text{False} & \text{False} \\
+    \text{False} & \text{True} & \text{True} \\
+    \text{True} & \text{False} & \text{True} \\
+    \text{True} & \text{True} & \text{False} \\
+    \hline
+    \end{array}
+    \]
+
+\item The formula $(P \wedge \neg Q) \vee (\neg P \wedge Q)$ is equivalent to $P + Q$ since for every possible combination of truth values for the propositions, the truth values of both formulas are the same. 
+\[
+\begin{array}{|c|c|c|c|c|c|c||c|}
+\hline
+P & Q & \neg P & \neg Q & P \wedge \neg Q & \neg P \wedge Q & (P \wedge \neg Q) \vee (\neg P \wedge Q) & P + Q \\
+\hline
+\text{False} & \text{False} & \text{True} & \text{True} & \text{False} & \text{False} & \text{False}& \text{False}\\
+\text{False} & \text{True} & \text{True} & \text{False} & \text{False} & \text{True} & \text{True} & \text{True} \\
+\text{True} & \text{False} & \text{False} & \text{True} & \text{True} & \text{False} & \text{True} & \text{True} \\
+\text{True} & \text{True} & \text{False} & \text{False} & \text{False} & \text{False} & \text{False} & \text{False} \\
+\hline
+\end{array}
+\]
+\end{enumerate}
+
+\pagebreak

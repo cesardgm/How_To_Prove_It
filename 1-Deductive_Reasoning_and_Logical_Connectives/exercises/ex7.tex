@@ -1,0 +1,22 @@
+% This is exercise.tex
+% Ex 7
+Identify the premises and conclusions of the following deductive arguments and analyze their logical forms. Do you think the reasoning is valid? (Although you will have only your intuition to guide you in answering this last question, in the next section we will develop some techniques for determining the validity of arguments.)
+
+\begin{enumerate}[label=(\alph*)]
+    \item Jane and Pete won't both win the math prize. Pete will win either the math prize or the chemistry prize. Jane will win the math prize. Therefore, Pete will win the chemistry prize.
+    \item The main course will be either beef or fish. The vegetable will be either peas or corn. We will not have both fish as a main course and corn as a vegetable. Therefore, we will not have both beef as a main course and peas as a vegetable.
+    \item Either John or Bill is telling the truth. Either Sam or Bill is lying. Therefore, either John is telling the truth or Sam is lying.
+    \item Either sales will go up and the boss will be happy, or expenses will go up and the boss won't be happy. Therefore, sales and expenses will not both go up.
+\end{enumerate} 
+
+\textbf{Solution:} \\
+In all of the above, each sentence is a premise, except the sentence that begins with "Therefore" since that is the conclusion.
+\begin{enumerate}[label=(\alph*)]
+    \item \textbf{The argument is valid.} Pete will win the chemistry or math prize, but he can't win the math prize because of Jane, so he is left with winning the chemistry prize.
+    
+    \item \textbf{The argument is invalid} since we are ruling out possibilities without just cause.
+    
+    \item \textbf{The reasoning is valid}, but not for the reasons that might seem obvious. The conclusion seems to restate part of the premises rather than providing a new insight. However, assuming that telling the truth and lying are mutually exclusive and collectively exhaustive (everyone is either lying or telling the truth), and given that Bill's role is ambiguous (he could be the one telling the truth or lying), the conclusion that either John is telling the truth or Sam is lying does follow from the premises but doesn't exclude other possibilities (e.g., both could be true). The argument's structure is somewhat valid but doesn't necessarily provide meaningful insight beyond the premises.
+    
+    \item \textbf{The argument is invalid.} It incorrectly infers the mutual exclusivity of sales and expenses rising from the conditions of the boss's happiness. The singular premise do not establish a necessary link between the increase in sales and expenses, merely associating them with the boss's emotional state. This association does not logically prevent both sales and expenses from increasing together. There is no logical connection between the premise and conclusion.
+\end{enumerate}

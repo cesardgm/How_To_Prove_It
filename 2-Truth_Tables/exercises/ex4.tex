@@ -1,0 +1,32 @@
+Find a formula using only the connectives $\wedge$ and $\neg$ that is equivalent to $P \vee Q$. Justify your answer with a truth table. 
+
+\textbf{Solution:} Recall the truth table for $P \vee Q$, shown below:
+
+\[
+\begin{array}{|c|c|c|}
+\hline
+P & Q & P \vee Q \\
+\hline
+\text{False} & \text{False} & \text{False} \\
+\text{False} & \text{True} & \text{True} \\
+\text{True} & \text{False} & \text{True} \\
+\text{True} & \text{True} & \text{True} \\
+\hline
+\end{array}
+\]
+
+The formula $\neg (\neg P \wedge \neg Q)$ is equivalent to $P \vee Q$ since for every possible combination of inputs, the truth values of both formulas are the same. 
+\[
+\begin{array}{|c|c|c|c|c|c||c|}
+\hline
+P & Q & \neg P & \neg Q & \neg P \wedge \neg Q & \neg (\neg P \wedge \neg Q) & P \vee Q \\
+\hline
+\text{False} & \text{False} & \text{True} & \text{True} & \text{True} & \text{False} & \text{False}\\
+\text{False} & \text{True} & \text{True} & \text{False} & \text{False} & \text{True} & \text{True}\\
+\text{True} & \text{False} & \text{False} & \text{True} & \text{False} & \text{True} & \text{True}\\
+\text{True} & \text{True} & \text{False} & \text{False} & \text{False} & \text{True} & \text{True}\\
+\hline
+\end{array}
+\]
+
+\pagebreak

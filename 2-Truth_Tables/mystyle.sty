@@ -1,0 +1,49 @@
+% mystyle.sty
+\ProvidesPackage{mystyle}
+
+% Packages for setting the page layout and margins
+\RequirePackage{times}
+\RequirePackage[letterpaper]{geometry}
+\geometry{top=1.0in, bottom=1.0in, left=1.0in, right=1.0in}
+
+% Doublespacing - Uncomment the following two lines if doublespacing is required
+% \RequirePackage{setspace}
+% \doublespacing
+
+% Rotating tables - Uncomment the following line if rotation of tables is required
+% \RequirePackage{rotating}
+
+% Header and footer customization
+\RequirePackage[english]{babel}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % Clears header and footer
+\rhead{\thepage} % Right header with page number
+\renewcommand{\headrulewidth}{0pt} % No horizontal line in header
+\renewcommand{\footrulewidth}{0pt} % No horizontal line in footer
+\setlength\headsep{0.333in} % Header separation from top of the page
+
+% Math packages
+\RequirePackage{graphicx,latexsym}
+\RequirePackage{longtable}
+\RequirePackage{amsmath,amsthm,amssymb}
+\RequirePackage{fullpage}
+\RequirePackage{setspace}
+\RequirePackage{parskip}
+\RequirePackage{bm} % Bold math
+\RequirePackage{color} % Color package
+\RequirePackage{lmodern} % Latin modern font
+\setlength{\parskip}{1em} % Paragraph separation
+
+% Package for adjusting table length
+\RequirePackage{tabularx}
+
+% Package for creating Venn diagrams
+\RequirePackage{venndiagram}
+
+% Package for customized list environments
+\RequirePackage{enumitem}
+
+% Inform that the package loading has been completed
+\endinput

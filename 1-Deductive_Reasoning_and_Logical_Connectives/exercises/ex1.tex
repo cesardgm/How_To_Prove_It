@@ -1,0 +1,24 @@
+% This is exercise.tex
+% Ex 1
+Analyze the logical forms of the following statements:
+\begin{enumerate}[label=(\alph*)]
+    \item We'll have either a reading assignment or homework problems, but we won't have both homework problems and a test.
+    \item You won't go skiing, or you will and there won't be any snow.
+    \item $\sqrt{7} \nleq 2$.
+\end{enumerate}
+
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+\item We denote by $R$ the proposition "we will have a reading assignment", by $H$ the proposition "we will have homework problems", and by $T$ the proposition "we will have a test". The given statement can be translated into propositional logic as follows:
+$$(R \vee H) \wedge \neg (H \wedge T).$$
+This expresses that we will have either a reading assignment or homework problems, but not both homework problems and a test.
+
+\item Let $S$ represent "you will go skiing" and $W$ represent "there will be snow". The statement can be rewritten as:
+$$\neg S \vee (S \wedge \neg W).$$
+
+\item The statement $\sqrt{7} \nleq 2$ can be understood as "the square root of 7 is not less than or equal to 2". It can be formally written as:
+$$   \neg \left( (\sqrt{7} < 2) \vee (\sqrt{7} = 2) \right),$$
+which denies the possibility that the square root of 7 is less than or equal to 2.
+\end{enumerate}
+
+\pagebreak

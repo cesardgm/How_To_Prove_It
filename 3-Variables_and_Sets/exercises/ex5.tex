@@ -1,0 +1,27 @@
+Simplify the following statements. Which variables are free and which are bound? If the statement has no free variables, say whether it is true or false.
+\begin{enumerate}[label=(\alph*)]
+    \item $-3 \in \{x \in \mathbb{R} \ | \ 13-2x > 1 \}$
+    \item $4 \in \{x \in \mathbb{R}^- \ | \ 13-2x > 1 \}$
+    \item $5 \notin \{x \in \mathbb{R} \ | \ 13-2x > c \}$
+\end{enumerate}
+
+\textbf{Solution:} Recall from the discussion after \textbf{Example 1.3.2.} that "if we want to know if 5 is an element of [$\{x \ | \ x^2 < 9 \}$] set, we simply apply the elementhood test in the definition of the set - in other words, we check whether or not $5^2 < 9$. Since $5^2=25>9$, it fails the test, so $5 \notin \{x \ | \ x^2 < 9\}$". We can use this discussion to assist us in understanding elementhood statements.
+\begin{enumerate}[label=(\alph*)]
+    \item $-3 \in \{x \in \mathbb{R} \ | \ 13-2x > 1 \} \rightarrow \bm{(-3 \in \mathbb{R}) \wedge (13-2(-3)>1)}$.
+    
+    The only bound variable is $x$, there are no free variables and the statement is true.
+    
+    \item $4 \in \{x \in \mathbb{R}^- \ | \ 13-2x > 1 \} \rightarrow \bm{(4 \in \mathbb{R}) \wedge (4 < 0) \wedge (13-2(4)>1)}$.
+    
+    The only bound variable is $x$, there are no free variables and the statement is false since $4 \notin \mathbb{R}^-$.
+
+    \item $5 \in \{x \in \mathbb{R} \ | \ 13-2x > c \} \rightarrow (5 \in \mathbb{R}) \wedge (13-2(5) > c)$.
+    
+    The above translates to 5 is an element of that set, so to express that 5 is not an element of that set, then we write 
+    
+    $5 \notin \{x \in \mathbb{R} \ | \ 13-2x > c \} \rightarrow \bm{\neg [(5 \in \mathbb{R}) \wedge (13-2(5) > c)]}$.
+
+    The bound variable is $x$ and the free variable is $c$.
+\end{enumerate}
+
+\pagebreak

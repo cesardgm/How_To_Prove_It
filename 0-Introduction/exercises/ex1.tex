@@ -1,0 +1,32 @@
+% This is exercise.tex
+% Ex 1
+\begin{enumerate}[label=(\alph*)]
+    \item Factor $2^{15}-1=32,767$ into a product of two smaller positive integers.
+    \item Find an integer $x$ such that $1<x<2^{32767}-1$ and $2^{32767}-1$ is divisible by $x$.
+\end{enumerate}
+
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+   \item From the \textit{Proof of Conjecture 2}, we are given that
+   $$xy=(2^b-1)(1+2^b+2^{2b}+2^{3b}+...+2^{(a-1)(b)})=2^{ab}-1=2^n-1$$
+   where $n$ is not prime, $x$ is not prime, $y$ is not prime, and $n,x,y,a,b$ are all positive integers. If $n=15$, then let $a=3$ and $b=5$. Hence, 
+   \begin{align*}
+       2^{15}-1 &= 2^{(3)(5)}-1 \\
+       &= (2^5-1)(1+2^5+2^{(3-1)(5)})\\
+       &= (32-1)(1+32+2^{10})\\
+       &= (31)(33+1024)\\
+       &= (31)(1057)\\
+       &= 32767
+   \end{align*}
+   We have thus factored $32,767$ as a product of $31$ and $1057$.
+
+   \item Similarly as with (a), if $n=32767$, then let $a=31$ and $b=1057$. Hence, 
+   \begin{align*}
+       2^{32767}-1 &= 2^{(31)(1057)}-1 \\
+       &= (2^{31}-1)(1+2^{31}+2^{2(31)}+2^{3(31)}+...+2^{(1057-1)(31)})\\
+       &= (2^{31}-1)(1+2^{31}+2^{2(31)}+...+2^{(1056)(31)})
+   \end{align*}
+   where $x=2^{31}-1$ and $y=1+2^{31}+2^{2(31)}+...+2^{(1056)(31)}$. We know from the \textit{Proof of Conjecture 2} that both $x,y$ are positive integers each smaller than $n$. Either can serve as the solution to the problem. For example, $x$ is greater than one and less than $2^{32767}-1$, and $x$ divides $2^{32767}-1$.
+\end{enumerate}
+
+\pagebreak

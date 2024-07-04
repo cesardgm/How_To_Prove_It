@@ -1,0 +1,42 @@
+Make truth tables for the following formulas:
+\begin{enumerate}[label=(\alph*)]
+    \item $\neg [P \wedge (Q \vee \neg P)]$.
+    \item $(P \vee Q) \wedge (\neg P \vee R).$
+\end{enumerate}
+
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+\item 
+\[
+\begin{array}{|c|c|c|c|c|c|}
+\hline
+P & Q & \neg P & Q \vee \neg P & P \wedge (Q \vee \neg P) & \neg [P \wedge (Q \vee \neg P)] \\
+\hline
+\text{False} & \text{False} & \text{True} & \text{True} & \text{False} & \text{True} \\
+\text{False} & \text{True} & \text{True} & \text{True} & \text{False} & \text{True} \\
+\text{True} & \text{False} & \text{False} & \text{False} & \text{False} & \text{True} \\
+\text{True} & \text{True} & \text{False} & \text{True} & \text{True} & \text{False} \\
+\hline
+\end{array}
+\]
+
+\item
+\[
+\begin{array}{|c|c|c|c|c|c|c|}
+\hline
+P & Q & R & \neg P & P \vee Q & \neg P \vee R & (P \vee Q) \wedge (\neg P \vee R) \\
+\hline
+\text{False} & \text{False} & \text{False} & \text{True} & \text{False} & \text{True} & \text{False} \\
+\text{False} & \text{False} & \text{True} & \text{True} & \text{False} & \text{True} & \text{False} \\
+\text{False} & \text{True} & \text{False} & \text{True} & \text{True} & \text{True} & \text{True} \\
+\text{True} & \text{False} & \text{False} & \text{False} & \text{True} & \text{False} & \text{False} \\
+\text{False} & \text{True} & \text{True} & \text{True} & \text{True} & \text{True} & \text{True} \\
+\text{True} & \text{False} & \text{True} & \text{False} & \text{True} & \text{True} & \text{True} \\
+\text{True} & \text{True} & \text{False} & \text{False} & \text{True} & \text{False} & \text{False} \\
+\text{True} & \text{True} & \text{True} & \text{False} & \text{True} & \text{True} & \text{True} \\
+\hline
+\end{array}
+\]
+\end{enumerate}
+
+\pagebreak

@@ -1,0 +1,13 @@
+Note that the associative laws say only that the parentheses are unnecessary when combining \textit{three} statements with $\wedge$ or $\vee$. In fact, these laws can be used to justify leaving parentheses out when more than three statements are combined. Use associative laws to show that $[P \wedge (Q \wedge R)] \wedge S$ is equivalent $(P \wedge Q) \wedge (R \wedge S)$.
+
+\textbf{Solution:}
+\begin{alignat*}{2}
+    [P \wedge (Q \wedge R)] \wedge S & \equiv [P \wedge Q \wedge R] \wedge S \quad && \text{(Associative Law)} \\
+    & \equiv [(P \wedge Q) \wedge R] \wedge S \quad && \text{(Associative Law)} \\
+    & \equiv (A \wedge R) \wedge S \quad && \text{(Let $A \equiv P \wedge Q$)} \\
+    & \equiv A \wedge R \wedge S \quad && \text{(Associative Law)} \\
+    & \equiv A \wedge (R \wedge S) \quad && \text{(Associative Law)} \\
+    & \equiv (P \wedge Q) \wedge (R \wedge S) \quad && \text{(Since $A \equiv P \wedge Q$)} \\
+\end{alignat*}
+
+\pagebreak

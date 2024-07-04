@@ -1,0 +1,22 @@
+% This is exercise.tex
+% Ex 2
+Analyze the logical forms of the following statements:
+\begin{enumerate}[label=(\alph*)]
+    \item Either John and Bill are both telling the truth, or neither of them is.
+    \item I'll have either fish or chicken, but I won't have both fish and mashed potatoes.
+    \item 3 is a common divisor of 6,9, and 15.
+\end{enumerate}
+
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+    \item Let $J$ represent the statement "John is telling the truth", and $B$ represent the statement "Bill is telling the truth". The given statement can be thus translated into propositional logic as follows:
+    $$(J \wedge B) \vee (\neg J \wedge \neg B).$$
+
+    \item Let $F$ represent the statement "I will have fish", $C$ represent the statement "I will have chicken" and $P$ represent the statement "I will have mashed potatoes". The given statement can be thus translated into propositional logic as follows:
+    $$(F \vee C) \wedge \neg (F \wedge P).$$
+
+    \item The statement "3 is a common divisor of 6,9, and 15" can be understood as "3 is a common divisor of 6", and "3 is a common divisor of 9", and "3 is a common divisor of 15". It can be formally written as:
+    $$(3 | 6) \wedge (3 | 9) \wedge (3 | 15).$$
+\end{enumerate}
+
+\pagebreak

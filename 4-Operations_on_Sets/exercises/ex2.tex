@@ -1,0 +1,22 @@
+Let $A = \{\text{United States, Germany, China, Australia}\}$, $B = \{\text{Germany, France, India, Brazil}\}$, and $C = \{x \: | \: x \: \text{is a country in Europe}\}$. List the elements of the following sets. Are any of the sets below disjoint from any of the others? Are any of the sets below subsets of any others?
+
+\begin{enumerate}[label=(\alph*)]
+    \item $A \cup B$.
+    \item $(A \cap B) \: \backslash \: C$.
+    \item $(B \cap C) \: \backslash \: A$.
+\end{enumerate}
+
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+\item $A \cup B = \bm{\{\text{United States, Germany, China, Australia, France, India, Brazil}\}}$.
+\item Since $A \cap B = \{\text{Germany}\}$ and $C$ is all European counties, then $(A \cap B) \: \backslash \: C = \bm{\emptyset}$.
+\item Since $\text{Germany} \in B \cap C = \{\text{Germany, France}\}$ and $\text{Germany} \in A$, then $(B \cap C) \: \backslash \: A = \bm{\{\text{France}\}}$. 
+\end{enumerate}
+
+Observe that $(B \cap C) \: \backslash \: A = \{\text{France}\} \in A \cup B$, so \textbf{(c)} is a subset of \textbf{(a)}.\\
+
+Observe that $\emptyset$ is the subset of every set, so $\textbf{(b)}$ is a subset of both $\textbf{(a)}$ and $\textbf{(c)}$.\\
+\
+
+The empty set is a subset of every set, including itself; however, the empty set is also disjoint from any set that has elements. The definition of disjoint sets is that they have no elements in common. Since the empty set has no elements at all, its intersection with any set that has elements is also empty. The property of being a subset does not contradict being disjoint in the case of the empty set. The empty set being a subset of a non-empty set simply means all elements of the empty set (of which there are none) are also elements of the non-empty set. This statement is vacuously true and does not require the empty set to share any actual elements with the non-empty set.
+\pagebreak  

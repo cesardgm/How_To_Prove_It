@@ -1,0 +1,121 @@
+Use truth tables to determine whether or not the following arguments are valid:
+\begin{enumerate}[label=(\alph*)]
+    \item Either sales or expenses will go up. If sales go up, then the boss will be happy. If expenses go up, then the boss will be unhappy. Therefore, sales and expenses will not both go up.
+    \item If the tax rate and the unemployment rate both go up, then there will be a recession. If the GNP goes up, then there will not be a recession. The GNP and taxes are both going up. Therefore, the unemployment rate is not going up.
+    \item The warning light will come on if and only if the pressure is too high and the relief valve is clogged. The relief valve is not clogged. Therefore, the warning light will come on if and only if the pressure is too high.
+\end{enumerate}
+
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+    \item Let the following symbols represent the corresponding statements:
+    \begin{itemize}
+        \item $S$: Sales will increase
+        \item $E$: Expenses will increase
+        \item $H$: Boss is happy
+    \end{itemize}
+    The logical form of the argument can be expressed as:
+    \begin{alignat*}{2}
+        S & \vee E && \quad \textbf{Sales will increase or expenses will increase} \\
+        S & \rightarrow H && \quad \textbf{If sales increase, the boss will be happy} \\
+        E & \rightarrow \neg H && \quad \textbf{If expenses increase, the boss will be unhappy} \\
+        \therefore \neg (S & \wedge E) && \quad \textbf{Therefore, sales and expenses will not both increase}
+    \end{alignat*}
+    
+    \[
+    \begin{array}{|c|c|c||c|c|c||c|c|c||c|}
+    \hline
+    S & E & H & \neg S & \neg E & \neg H & S \vee E & S \rightarrow H & E \rightarrow \neg H & \neg (S \wedge E) \\
+    \hline
+    0 & 0 & 0 & 1 & 1 & 1 & 0 & 1 & 1 & 1 \\
+    0 & 0 & 1 & 1 & 1 & 0 & 0 & 1 & 1 & 1 \\
+    0 & 1 & 0 & 1 & 0 & 1 & \color{blue}1 & \color{blue}1 & \color{blue}1 & \color{blue}1 \\
+    0 & 1 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 1 \\
+    1 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 1 & 1 \\
+    1 & 0 & 1 & 0 & 1 & 0 & \color{blue}1 & \color{blue}1 & \color{blue}1 & \color{blue}1 \\
+    1 & 1 & 0 & 0 & 0 & 1 & 1 & 0 & 1 & 0 \\
+    1 & 1 & 1 & 0 & 0 & 0 & 1 & 1 & 0 & 0 \\
+    \hline
+    \end{array}
+    \]
+
+    To determine if the argument is valid based on the truth table, we must identify the premises and conclusion, and then check if there is any scenario where all the premises are true and the conclusion is false. If no such scenario exists, the argument is valid. We see that rows 3 and 6 are the only rows where all the premises are true. More importantly, the conclusion in both these rows are true. \textbf{Hence, the argument is valid.}
+    \pagebreak
+
+    \item Let the following symbols represent the corresponding statements:
+    \begin{itemize}
+        \item $T$: Tax rate increases
+        \item $U$: Unemployment rate increases
+        \item $R$: There is a recession
+        \item $G$: GNP increases
+    \end{itemize}
+    The logical form of the argument can be expressed as:
+    \begin{alignat*}{2}
+        (T \wedge U) & \rightarrow R && \quad \textbf{If both the tax rate and unemployment rate increase, then there's a recession} \\
+        G & \rightarrow \neg R && \quad \textbf{If the GNP increases, then there's no be a recession} \\
+        G & \wedge T && \quad \textbf{Both the GNP and taxe rate are increasing} \\
+        \bm{\therefore} & \neg U && \quad \textbf{Therefore, the unemployment rate will not increase}
+    \end{alignat*}
+
+    \[
+    \begin{array}{|c|c|c|c||c||c|c|c||c|}
+    \hline
+    T & U & R & G & \neg R & (T \wedge U) \rightarrow R & G \rightarrow \neg R & G \wedge T & \neg U\\
+    \hline
+    0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 1 \\
+    0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 1 \\
+    0 & 0 & 1 & 0 & 0 & 1 & 1 & 0 & 1 \\
+    0 & 0 & 1 & 1 & 0 & 1 & 0 & 0 & 1 \\
+
+    0 & 1 & 0 & 0 & 1 & 1 & 1 & 0 & 0 \\
+    0 & 1 & 0 & 1 & 1 & 1 & 1 & 0 & 0 \\
+    0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 \\
+    0 & 1 & 1 & 1 & 0 & 1 & 0 & 0 & 0 \\
+
+    1 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 1 \\
+    1 & 0 & 0 & 1 & 1 & \color{blue}1 & \color{blue}1 & \color{blue}1 & \color{blue}1 \\
+    1 & 0 & 1 & 0 & 0 & 1 & 1 & 0 & 1 \\
+    1 & 0 & 1 & 1 & 0 & 1 & 0 & 1 & 1 \\
+
+    1 & 1 & 0 & 0 & 1 & 0 & 1 & 0 & 0 \\
+    1 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 0 \\
+    1 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 \\
+    1 & 1 & 1 & 1 & 0 & 1 & 0 & 1 & 0 \\
+    \hline
+    \end{array}
+    \]
+    To determine if the argument is valid based on the truth table, we must identify the premises and conclusion, and then check if there is any scenario where all the premises are true and the conclusion is false. If no such scenario exists, the argument is valid. We see that row 10 is the only row where the premises are true. More importantly, the conclusion is true. \textbf{Hence, the argument is valid.}
+    \pagebreak
+
+    \item Let the following symbols represent the corresponding statements:
+    \begin{itemize}
+        \item $W$: Warning lights will turn on
+        \item $P$: Pressure is high
+        \item $V$: Relief valve is clogged
+    \end{itemize}
+    The logical form of the argument can be expressed as:
+    \begin{alignat*}{2}
+        W &\leftrightarrow (P \wedge V) &&\quad \textbf{Warning light turns on iff the pressure is high and the valve is clogged}\\
+        &\neg V &&\quad \textbf{The valve is not clogged}\\
+        \therefore W &\leftrightarrow P &&\quad \textbf{Therefore, the warning light turns on iff the pressure is too high}\\
+    \end{alignat*}
+
+    \[
+    \begin{array}{|c|c|c||c||c|c||c|}
+    \hline
+    W & P & V & P \wedge V & W \leftrightarrow (P \wedge V) & \neg V & W \leftrightarrow P\\
+    \hline
+    0 & 0 & 0 & 0 & 1 & 1 & 1 \\
+    0 & 0 & 1 & 0 & 1 & 0 & 1 \\
+    0 & 1 & 0 & 0 & \color{blue}1 & \color{blue}1 & \color{red}0 \\
+    0 & 1 & 1 & 1 & 0 & 0 & 0 \\
+
+    1 & 0 & 0 & 0 & 0 & 1 & 0 \\
+    1 & 0 & 1 & 0 & 0 & 0 & 0 \\
+    1 & 1 & 0 & 0 & 0 & 1 & 1 \\
+    1 & 1 & 1 & 1 & 1 & 0 & 1 \\
+    \hline
+    \end{array}
+    \]
+    To determine if the argument is valid based on the truth table, we must identify the premises and conclusion, and then check if there is any scenario where all the premises are true and the conclusion is false. If no such scenario exists, the argument is valid. We see that row 3 is one of two rows where the premises are true. More importantly, the conclusion is false in row 3. \textbf{Hence, the argument is invalid.}
+\end{enumerate}
+\pagebreak

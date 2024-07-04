@@ -1,0 +1,16 @@
+Find a formula involving only the connectives $\neg$ and $\rightarrow$ that is equivalent to $P \leftrightarrow Q$.
+
+\textbf{Solution:} I contend that $P \leftrightarrow Q \equiv \neg [\neg (P \rightarrow Q) \rightarrow (Q \rightarrow P)]$.
+    \[
+    \begin{array}{|c|c||c|||c|c|c|c|||c|}
+    \hline
+    P & Q & P \leftrightarrow Q & P \rightarrow Q & Q \rightarrow P & \neg (P \rightarrow Q) & (Q \rightarrow P) \rightarrow \neg (P \rightarrow Q) & \neg [(Q \rightarrow P) \rightarrow \neg (P \rightarrow Q)]\\
+    \hline
+    0 & 0 & 1 & 1 & 1 & 0 & 0 & 1\\
+    0 & 1 & 0 & 1 & 0 & 0 & 1 & 0\\
+    1 & 0 & 0 & 0 & 1 & 1 & 1 & 0\\
+    1 & 1 & 1 & 1 & 1 & 0 & 0 & 1\\
+    \hline
+    \end{array}
+    \]
+\pagebreak

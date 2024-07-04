@@ -1,0 +1,24 @@
+Verify the identities in exercise 4 by writing out (using logical symbols) what it means for an object $x$ to be an element of each set and then using logical equivalences.
+
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+    \item We are to prove that $A \: \backslash \: (A \cap B) = A \: \backslash \: B$.
+    \begin{alignat*}{2}
+        x \in A \: \backslash \: (A \cap B) &\equiv x \in A \wedge \neg (x \in A \cap B) && \quad \textbf{(Def. of Difference of Sets)} \\
+        &\equiv x \in A \wedge \neg (x \in A \wedge x \in B) && \quad \textbf{(Def. of Intersection of Sets)} \\
+        &\equiv x \in A \wedge [\neg (x \in A) \vee \neg (x \in B)] && \quad \textbf{(DeMorgan's Law)}\\
+        &\equiv [x \in A \wedge \neg (x \in A)] \vee [x \in A \wedge \neg (x \in B)] && \quad \textbf{(Distributive Law)}\\
+        &\equiv \text{Contradiction} \vee [x \in A \wedge \neg (x \in B)] && \quad \textbf{(Def. of Contradiction)}\\
+        &\equiv x \in A \wedge \neg (x \in B) && \quad \textbf{(Law of Contradiction)}\\
+        &\equiv x \in A \: \backslash \: B && \quad \textbf{(Def. of Difference of Sets)}
+    \end{alignat*}
+    \item We are to prove that $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$.
+    \begin{alignat*}{2}
+        x \in A \cup (B \cap C) &\equiv x \in A \vee (x \in B \cap C) && \quad \textbf{(Def. of Union of Sets)} \\
+        &\equiv x \in A \vee (x \in B \wedge x \in C) && \quad \textbf{(Def. of Intersection of Sets)} \\
+        &\equiv (x \in A \vee x \in B) \wedge (x \in A \vee x \in C) && \quad \textbf{(Distributive Law)}\\
+        &\equiv (x \in A \cup B) \wedge (x \in A \cup C) && \quad \textbf{(Def. of Union of Sets)}\\
+        &\equiv x \in (A \cup B) \cap (A \cup C) && \quad \textbf{(Def. of Intersection of Sets)}
+    \end{alignat*}
+\end{enumerate}
+\pagebreak

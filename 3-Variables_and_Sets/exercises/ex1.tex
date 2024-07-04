@@ -1,0 +1,15 @@
+Analyze the logical forms of the following statements:
+\begin{enumerate}[label=(\alph*)]
+    \item 3 is a common divisor of 6, 9, and 15. (Note: You did this in exercise 2 of Section 1.1, but you should be able to give better answer now.)
+    \item $x$ is divisible by both 2 and 3 but not 4.
+    \item $x$ and $y$ are natural numbers, and exactly one of them is prime.
+\end{enumerate}
+
+\textbf{Solution:}
+\begin{enumerate}[label=(\alph*)]
+\item $D(6) \wedge D(9) \wedge D(15)$, where $D(x)$ means "$x$ is divisible by 3".
+\item $D(x,2) \wedge D(x,3) \wedge \neg D(x,4)$, where $D(x,y)$ means "$x$ is divisible by y". 
+\item $N(x) \wedge N(y) \wedge [(P(x) \wedge \neg P(y)) \vee (P(y) \wedge \neg P(x))]$, where $N(x)$ means "$x$ is a natural number" and $P(x)$ means "$x$ is prime".
+\end{enumerate}
+
+\pagebreak
